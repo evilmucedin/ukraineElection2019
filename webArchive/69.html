@@ -1,0 +1,3558 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="img2019/fontawesome/css/all.css">
+<script type="text/javascript" src="img2019/jquery.slim.min.js"></script>
+<link rel="stylesheet" href="img2019/pure-min.css">
+<LINK REL=STYLESHEET href="print_css.css" TYPE="text/css">
+<TITLE>Центральна виборча комісія України - WWW відображення ІАС «Вибори Президента України 2019»</TITLE>
+<script type="text/javascript">
+      var clog=console.log;
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+     </script>
+<style type="text/css">
+
+
+      * {box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font: 16px Verdana, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background: white;
+      }
+
+      #wrap {
+        min-height: 100%;
+        background: #FAFDFE;
+      }
+
+      main {
+        display:block;
+        padding-bottom: 130px;
+        margin:0 90px;
+       }
+
+      header {
+        background: #FAFDFE;
+        text-align: center;
+      }
+
+      header a {
+        display: block;
+        text-decoration: none;
+        outline: none;
+        transition: .3s ease-in-out;
+      }
+
+
+      .logo {
+        color: #485889!important;
+        font-size: 2.1rem;
+        padding: 10px 0;
+
+      }
+
+      .sublogo{
+        display: block;
+        font-size: 1.5rem;
+      }
+
+      footer {
+        background: #1e7387;
+        margin-top: -100px;
+        height: 100px;
+        color: white;
+        text-align:center;
+        padding:30px;
+        font:0.7rem Verdana, Arial, Helvetica, sans-serif;
+      }
+
+
+      .topnav {
+        overflow: hidden;
+        background-color: #1e7387;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 13px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 10px;
+        background-color: #1e7387;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 999;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black !important;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .topnav a:hover, .dropdown:hover .dropbtn {
+        background-color: 	#006080;
+        color: white;
+
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+
+      #top-bar{
+        height:40px;
+        background:linear-gradient(to right, rgba(72,88,152,1) 0%,rgba(72,88,152,1) 48%,rgba(72,88,152,1) 48%,rgba(72,88,152,1) 49%,rgba(72,88,152,1) 49%,rgba(255,127,80,1) 54%,rgba(255,127,80,1) 54%,rgba(255,127,80,1) 55%,rgba(255,127,80,1) 55%,rgba(255,127,80,1) 56%,rgba(255,127,80,1) 100%)
+      }
+
+      .innerTop{
+        height:40px;
+        background-size:cover;
+      }
+
+      .testwork{
+        font-size:0.7rem;
+        padding:5px;
+        font-weight:bold;
+        color:red;
+        text-align:right;
+        margin:0 90px;
+
+      }
+
+     @media screen and (max-width:768px) {
+
+        header{font-size:0.9rem}
+        .topnav a:not(:first-child), .dropdown .dropbtn {
+          display: none;
+        }
+        h3,h2{font-size: 12pt;}
+       .logo{
+        font-size: 1.3rem;
+        padding: 10px 0;
+
+      }
+       .testwork{
+       margin:0;
+       }
+      .sublogo{
+        font-size: 0.8rem;
+      }
+      .innerTop{
+          background-image:none;
+          width:20px;
+       }
+
+        main {
+          margin:0 5px;
+          padding-bottom: 60px;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+
+        .topnav.responsive {position: relative;}
+
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .topnav.responsive .dropdown {float: none;}
+
+        .topnav.responsive .dropdown-content {position: relative; display:block}
+
+        .topnav.responsive .dropdown .dropbtn {
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+
+        #top-bar{
+          background:#485898;
+        }
+
+        .pure-table th{font-size:0.7rem}
+        .txt_rght{display:none;}
+
+       footer{
+               margin-top: -50px;
+               height: 50px;
+               padding:15px;
+
+        }
+       #footalert{display:none;}
+
+       .Top32{display:none;}
+
+    }
+
+
+
+
+
+</style>
+</HEAD>
+<BODY>
+<div id="wrap">
+<header>
+<div ><a href="wp001.html" class="logo">Вибори Президента України 2019<span class="sublogo">Центральна виборча комісія</span></a></div>
+<div class="topnav" id="myTopnav">
+<div class="dropdown">
+<button class="dropbtn">Округи, дільниці
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp030pt001f01=719.html">Територіальні виборчі округи</a>
+<a href="wp045pt001f01=719.html">Закордонний виборчий округ</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Кандидати
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp060pt001f01=719.html">Особи, яким відмовлено в реєстрації</a>
+<a href="wp003pt001f01=719.html">Зареєстровані кандидати</a>
+<a href="wp059pt001f01=719.html">Кандидати, реєстрацію яких скасовано</a>
+<a href="wp054pt001f01=719.html">Довірені особи кандидатів</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Окружні комісії
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp055_npt001f01=719.html">Контакти та склад ОВК</a>
+<a href="wp006pt001f01=719.html">Рішення ОВК</a>
+<a href="wp065pt001f01=719.html">Аналітика</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Офіційні спостерігачі
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp141pt001f01=719.html">Від громадських організацій</a>
+<a href="wp041pt001f01=719.html">Від іноземних держав і міжнародних організацій</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Агітація та ЗМІ
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp051pt001f01=719.html">Результати жеребкування</a>
+<a href="wp049pt001f01=719.html">Акредитовані представники ЗМІ</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Голосування
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp095pt001f01=719pt049f01=0.html">Відомості на початок голосування</a>
+<a href="wp063pt001f01=719.html">Активність виборців</a>
+<a href="wp095pt001f01=719pt049f01=5.html">Відомості на момент закінчення голосування</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Підрахунок та підсумки голосування
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp300pt001f01=719.html">В цілому по Україні</a>
+<a href="wp301pt001f01=719.html">В межах регіонів</a>
+<a href="wp312pt001f01=719.html">В межах закордонного виборчого округу</a>
+<a href="wp335pt001f01=719.html">На виборчих дільницях</a>
+<a href="wp313pt001f01=719.html">Підтримка лідерів в регіонах</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Виборчі фонди
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp082pt001f01=719.html">Фінансові звіти</a>
+</div>
+</div>
+ <a href="javascript:void(0);" style="font-size:17px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</header>
+<main>
+
+<div class="noprint" style="overflow: hidden; padding: 15px 0;">
+  <div style="width: 100%;">
+    <div style="float: left;"><div class="sqr1515">
+    </div>
+Відомості про підрахунок голосів виборців на виборчих дільницях
+</div>
+    <div style="float: right;"><span class="txt_rght b">Чергові вибори Президента України 31 березня 2019 року</span></div>
+  </div>
+</div>
+<h2 class="cntr w100 pdd15">Територіальний виборчий округ № 69 (Закарпатська область)</h2>
+<style type="text/css">
+table.pure-table th { font-size:0.7rem; }
+.col-fixed{ position: sticky; left: 0; z-index: 997; }
+th.col-fixed{ background: #e0e0e0 !important; }
+td.col-fixed{ background: #fff !important; }
+.row-fixed{ position: sticky; position: -webkit-sticky; top: 0; z-index: 997; }
+th.row-fixed{ background: #e0e0e0 !important; }
+td.row-fixed{ background: #fff !important; }
+th.row-fixed.col-fixed{ z-index: 998; }
+/*стиль scrollbar*/
+#pure-wrap::-webkit-scrollbar { width: 12px; height: 12px; }
+#pure-wrap::-webkit-scrollbar-track { box-shadow: inset 0 0 5px grey;   border-radius: 4px; }
+#pure-wrap::-webkit-scrollbar-thumb { background: #06116169;   border-radius: 4px; }
+
+</style>
+<div id="pure-wrap" class="w100 pure-u-md-1" style="max-height:40rem; overflow:auto;">
+<table class="pure-table pure-table-horizontal w100" style="border:none;">
+<thead>
+<tr>
+<th class="col-fixed row-fixed">№ ВД
+<th class="row-fixed">1.К-сть одержаних бюлетенів
+<th class="row-fixed">2.К-сть виборців, внесених до списку
+<th class="row-fixed">3.К-сть виборців, внесених до витягу для голос. за місцем перебув.
+<th class="row-fixed">4.К-сть невикор. бюлетенів
+<th class="row-fixed">5.К-сть виборців, які отримали бюлетені у приміщ.
+<th class="row-fixed">6.К-сть виборців, які отримали бюлетені за місцем перебув.
+<th class="row-fixed">7.Загальна к-сть виборців, які отримали бюлетені
+<th class="row-fixed">8.К-сть бюлетенів, що не підлягають врахуванню
+<th class="row-fixed">9.К-сть виборців, які взяли участь у голосуванні
+<th class="row-fixed">10.К-сть бюлетенів, визнаних недійсними
+<th class="row-fixed">Балашов<br>Геннадій
+<th class="row-fixed">Безсмертний<br>Роман
+<th class="row-fixed">Богомолець<br>Ольга
+<th class="row-fixed">Богословська<br>Інна
+<th class="row-fixed">Бойко<br>Юрій
+<th class="row-fixed">Бондар<br>Віктор
+<th class="row-fixed">Ващенко<br>Олександр
+<th class="row-fixed">Вілкул<br>Олександр
+<th class="row-fixed">Габер<br>Микола
+<th class="row-fixed">Гриценко<br>Анатолій
+<th class="row-fixed">Данилюк<br>Олександр
+<th class="row-fixed">Дерев’янко<br>Юрій
+<th class="row-fixed">Журавльов<br>Василь
+<th class="row-fixed">Зеленський<br>Володимир
+<th class="row-fixed">Каплін<br>Сергій
+<th class="row-fixed">Кармазін<br>Юрій
+<th class="row-fixed">Кива<br>Ілля
+<th class="row-fixed">Корнацький<br>Аркадій
+<th class="row-fixed">Кошулинський<br>Руслан
+<th class="row-fixed">Кривенко<br>Віктор
+<th class="row-fixed">Купрій<br>Віталій
+<th class="row-fixed">Литвиненко<br>Юлія
+<th class="row-fixed">Ляшко<br>Олег
+<th class="row-fixed">Мороз<br>Олександр
+<th class="row-fixed">Наливайченко<br>Валентин
+<th class="row-fixed">Насіров<br>Роман
+<th class="row-fixed">Новак<br>Андрій
+<th class="row-fixed">Носенко<br>Сергій
+<th class="row-fixed">Петров<br>Володимир
+<th class="row-fixed">Порошенко<br>Петро
+<th class="row-fixed">Ригованов<br>Руслан
+<th class="row-fixed">Скоцик<br>Віталій
+<th class="row-fixed">Смешко<br>Ігор
+<th class="row-fixed">Соловйов<br>Олександр
+<th class="row-fixed">Тарута<br>Сергій
+<th class="row-fixed">Тимошенко<br>Юлія
+<th class="row-fixed">Тимошенко<br>Юрій
+<th class="row-fixed">Шевченко<br>Ігор
+<th class="row-fixed">Шевченко<br>Олександр
+<th class="row-fixed">Дата та час протоколу
+</tr>
+</thead>
+<tr>
+<td class="cntr col-fixed"><b>210004</b>
+<td class="cntr">2148
+<td class="cntr">2133
+<td class="cntr">9
+<td class="cntr">1296
+<td class="cntr">844
+<td class="cntr">8
+<td class="cntr">852
+<td class="cntr">0
+<td class="cntr">852
+<td class="cntr">19
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">72
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">32
+<td class="cntr">0
+<td class="cntr">29
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">470
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">31
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">38
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">19
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">94
+<td class="cntr">4
+<td class="cntr">1
+<td class="cntr">4
+<td class="cntr">01.04.2019 01:10
+<tr>
+<td class="cntr col-fixed"><b>210005</b>
+<td class="cntr">567
+<td class="cntr">571
+<td class="cntr">22
+<td class="cntr">329
+<td class="cntr">216
+<td class="cntr">22
+<td class="cntr">238
+<td class="cntr">0
+<td class="cntr">238
+<td class="cntr">11
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">31
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">11
+<td class="cntr">1
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">125
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">12
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">15
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">01.04.2019 03:00
+<tr>
+<td class="cntr col-fixed"><b>210012</b>
+<td class="cntr">1380
+<td class="cntr">1377
+<td class="cntr">25
+<td class="cntr">941
+<td class="cntr">417
+<td class="cntr">22
+<td class="cntr">439
+<td class="cntr">0
+<td class="cntr">439
+<td class="cntr">17
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">54
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">19
+<td class="cntr">0
+<td class="cntr">10
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">214
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">3
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">15
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">73
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">31.03.2019 23:45
+<tr>
+<td class="cntr col-fixed"><b>210017</b>
+<td class="cntr">987
+<td class="cntr">980
+<td class="cntr">20
+<td class="cntr">753
+<td class="cntr">220
+<td class="cntr">14
+<td class="cntr">234
+<td class="cntr">0
+<td class="cntr">234
+<td class="cntr">21
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">17
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">8
+<td class="cntr">1
+<td class="cntr">7
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">117
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">31
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">31.03.2019 23:14
+<tr>
+<td class="cntr col-fixed"><b>210029</b>
+<td class="cntr">813
+<td class="cntr">807
+<td class="cntr">17
+<td class="cntr">609
+<td class="cntr">197
+<td class="cntr">7
+<td class="cntr">204
+<td class="cntr">0
+<td class="cntr">204
+<td class="cntr">25
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">32
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">18
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">77
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">14
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">31.03.2019 22:25
+<tr>
+<td class="cntr col-fixed"><b>210035</b>
+<td class="cntr">1035
+<td class="cntr">1031
+<td class="cntr">21
+<td class="cntr">678
+<td class="cntr">340
+<td class="cntr">17
+<td class="cntr">357
+<td class="cntr">0
+<td class="cntr">357
+<td class="cntr">14
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">58
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">29
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">175
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">13
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">31
+<td class="cntr">7
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">31.03.2019 21:20
+<tr>
+<td class="cntr col-fixed"><b>210175</b>
+<td class="cntr">2037
+<td class="cntr">2022
+<td class="cntr">44
+<td class="cntr">1193
+<td class="cntr">801
+<td class="cntr">43
+<td class="cntr">844
+<td class="cntr">0
+<td class="cntr">844
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">84
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">13
+<td class="cntr">0
+<td class="cntr">27
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">379
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">89
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">87
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">40
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">75
+<td class="cntr">8
+<td class="cntr">2
+<td class="cntr">11
+<td class="cntr">01.04.2019 00:15
+<tr>
+<td class="cntr col-fixed"><b>210176</b>
+<td class="cntr">1284
+<td class="cntr">1270
+<td class="cntr">17
+<td class="cntr">728
+<td class="cntr">544
+<td class="cntr">12
+<td class="cntr">556
+<td class="cntr">0
+<td class="cntr">556
+<td class="cntr">17
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">80
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">15
+<td class="cntr">2
+<td class="cntr">18
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">212
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">74
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">34
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">65
+<td class="cntr">9
+<td class="cntr">2
+<td class="cntr">4
+<td class="cntr">01.04.2019 00:17
+<tr>
+<td class="cntr col-fixed"><b>210203</b>
+<td class="cntr">1170
+<td class="cntr">1191
+<td class="cntr">45
+<td class="cntr">595
+<td class="cntr">532
+<td class="cntr">43
+<td class="cntr">575
+<td class="cntr">0
+<td class="cntr">575
+<td class="cntr">15
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">17
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">19
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">236
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">3
+<td class="cntr">52
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">51
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">32
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">113
+<td class="cntr">5
+<td class="cntr">2
+<td class="cntr">5
+<td class="cntr">01.04.2019 01:40
+<tr>
+<td class="cntr col-fixed"><b>210204</b>
+<td class="cntr">621
+<td class="cntr">641
+<td class="cntr">26
+<td class="cntr">267
+<td class="cntr">329
+<td class="cntr">25
+<td class="cntr">354
+<td class="cntr">0
+<td class="cntr">354
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">34
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">12
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">141
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">47
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">17
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">61
+<td class="cntr">6
+<td class="cntr">2
+<td class="cntr">3
+<td class="cntr">01.04.2019 00:40
+<tr>
+<td class="cntr col-fixed"><b>210205</b>
+<td class="cntr">348
+<td class="cntr">356
+<td class="cntr">10
+<td class="cntr">155
+<td class="cntr">183
+<td class="cntr">10
+<td class="cntr">193
+<td class="cntr">0
+<td class="cntr">193
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">54
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">26
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">22
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">51
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">3
+<td class="cntr">31.03.2019 21:17
+<tr>
+<td class="cntr col-fixed"><b>210206</b>
+<td class="cntr">234
+<td class="cntr">231
+<td class="cntr">13
+<td class="cntr">103
+<td class="cntr">118
+<td class="cntr">13
+<td class="cntr">131
+<td class="cntr">0
+<td class="cntr">131
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">12
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">29
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">20
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">14
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">38
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">01.04.2019 04:50
+<tr>
+<td class="cntr col-fixed"><b>210207</b>
+<td class="cntr">117
+<td class="cntr">116
+<td class="cntr">3
+<td class="cntr">46
+<td class="cntr">69
+<td class="cntr">2
+<td class="cntr">71
+<td class="cntr">0
+<td class="cntr">71
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">17
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">18
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">01.04.2019 01:30
+<tr>
+<td class="cntr col-fixed"><b>210208</b>
+<td class="cntr">723
+<td class="cntr">714
+<td class="cntr">39
+<td class="cntr">366
+<td class="cntr">319
+<td class="cntr">38
+<td class="cntr">357
+<td class="cntr">0
+<td class="cntr">357
+<td class="cntr">11
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">20
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">14
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">138
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">43
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">25
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">60
+<td class="cntr">2
+<td class="cntr">8
+<td class="cntr">9
+<td class="cntr">01.04.2019 01:30
+<tr>
+<td class="cntr col-fixed"><b>210211</b>
+<td class="cntr">249
+<td class="cntr">247
+<td class="cntr">9
+<td class="cntr">94
+<td class="cntr">146
+<td class="cntr">9
+<td class="cntr">155
+<td class="cntr">0
+<td class="cntr">155
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">58
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">17
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">13
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">8
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">29
+<td class="cntr">1
+<td class="cntr">4
+<td class="cntr">4
+<td class="cntr">01.04.2019 02:40
+<tr>
+<td class="cntr col-fixed"><b>210212</b>
+<td class="cntr">198
+<td class="cntr">196
+<td class="cntr">4
+<td class="cntr">85
+<td class="cntr">110
+<td class="cntr">3
+<td class="cntr">113
+<td class="cntr">0
+<td class="cntr">113
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">11
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">17
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">15
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">33
+<td class="cntr">3
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">01.04.2019 00:45
+<tr>
+<td class="cntr col-fixed"><b>210223</b>
+<td class="cntr">555
+<td class="cntr">552
+<td class="cntr">22
+<td class="cntr">334
+<td class="cntr">208
+<td class="cntr">13
+<td class="cntr">221
+<td class="cntr">0
+<td class="cntr">221
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">12
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">100
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">27
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">31
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">01.04.2019 00:30
+<tr>
+<td class="cntr col-fixed"><b>210225</b>
+<td class="cntr">1107
+<td class="cntr">1098
+<td class="cntr">59
+<td class="cntr">636
+<td class="cntr">418
+<td class="cntr">53
+<td class="cntr">471
+<td class="cntr">0
+<td class="cntr">471
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">34
+<td class="cntr">3
+<td class="cntr">2
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">21
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">188
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">42
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">36
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">109
+<td class="cntr">7
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">01.04.2019 01:30
+<tr>
+<td class="cntr col-fixed"><b>210303</b>
+<td class="cntr">1863
+<td class="cntr">1854
+<td class="cntr">32
+<td class="cntr">1105
+<td class="cntr">733
+<td class="cntr">25
+<td class="cntr">758
+<td class="cntr">0
+<td class="cntr">758
+<td class="cntr">19
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">60
+<td class="cntr">13
+<td class="cntr">1
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">29
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">340
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">58
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">72
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">24
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">115
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">5
+<td class="cntr">01.04.2019 00:30
+<tr>
+<td class="cntr col-fixed"><b>210308</b>
+<td class="cntr">996
+<td class="cntr">983
+<td class="cntr">3
+<td class="cntr">600
+<td class="cntr">394
+<td class="cntr">2
+<td class="cntr">396
+<td class="cntr">0
+<td class="cntr">396
+<td class="cntr">8
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">26
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">162
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">39
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">51
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">62
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">31.03.2019 23:00
+<tr>
+<td class="cntr col-fixed"><b>210312</b>
+<td class="cntr">1278
+<td class="cntr">1278
+<td class="cntr">51
+<td class="cntr">426
+<td class="cntr">803
+<td class="cntr">49
+<td class="cntr">852
+<td class="cntr">0
+<td class="cntr">852
+<td class="cntr">19
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">62
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">13
+<td class="cntr">3
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">386
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">64
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">55
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">38
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">163
+<td class="cntr">11
+<td class="cntr">5
+<td class="cntr">11
+<td class="cntr">01.04.2019 00:15
+<tr>
+<td class="cntr col-fixed"><b>210313</b>
+<td class="cntr">1368
+<td class="cntr">1356
+<td class="cntr">22
+<td class="cntr">631
+<td class="cntr">720
+<td class="cntr">17
+<td class="cntr">737
+<td class="cntr">0
+<td class="cntr">737
+<td class="cntr">14
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">46
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">20
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">392
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">50
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">53
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">21
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">108
+<td class="cntr">8
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">01.04.2019 00:15
+<tr>
+<td class="cntr col-fixed"><b>210314</b>
+<td class="cntr">1386
+<td class="cntr">1373
+<td class="cntr">26
+<td class="cntr">748
+<td class="cntr">615
+<td class="cntr">23
+<td class="cntr">638
+<td class="cntr">0
+<td class="cntr">638
+<td class="cntr">10
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">28
+<td class="cntr">11
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">34
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">288
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">41
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">78
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">17
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">93
+<td class="cntr">13
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">01.04.2019 03:20
+<tr>
+<td class="cntr col-fixed"><b>210318</b>
+<td class="cntr">594
+<td class="cntr">594
+<td class="cntr">9
+<td class="cntr">232
+<td class="cntr">353
+<td class="cntr">9
+<td class="cntr">362
+<td class="cntr">0
+<td class="cntr">362
+<td class="cntr">14
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">23
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">156
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">21
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">38
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">58
+<td class="cntr">8
+<td class="cntr">4
+<td class="cntr">4
+<td class="cntr">01.04.2019 03:54
+<tr>
+<td class="cntr col-fixed"><b>210320</b>
+<td class="cntr">495
+<td class="cntr">492
+<td class="cntr">11
+<td class="cntr">193
+<td class="cntr">291
+<td class="cntr">11
+<td class="cntr">302
+<td class="cntr">0
+<td class="cntr">302
+<td class="cntr">6
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">24
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">128
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">25
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">31
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">13
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">42
+<td class="cntr">4
+<td class="cntr">1
+<td class="cntr">4
+<td class="cntr">31.03.2019 22:00
+<tr>
+<td class="cntr col-fixed"><b>210322</b>
+<td class="cntr">624
+<td class="cntr">624
+<td class="cntr">34
+<td class="cntr">249
+<td class="cntr">346
+<td class="cntr">29
+<td class="cntr">375
+<td class="cntr">0
+<td class="cntr">375
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">23
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">13
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">151
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">29
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">41
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">77
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">31.03.2019 22:50
+<tr>
+<td class="cntr col-fixed"><b>210323</b>
+<td class="cntr">330
+<td class="cntr">325
+<td class="cntr">12
+<td class="cntr">163
+<td class="cntr">157
+<td class="cntr">10
+<td class="cntr">167
+<td class="cntr">0
+<td class="cntr">167
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">4
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">62
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">13
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">27
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">29
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">31.03.2019 23:05
+<tr>
+<td class="cntr col-fixed"><b>210324</b>
+<td class="cntr">207
+<td class="cntr">201
+<td class="cntr">8
+<td class="cntr">98
+<td class="cntr">101
+<td class="cntr">8
+<td class="cntr">109
+<td class="cntr">0
+<td class="cntr">109
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">10
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">26
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">20
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">14
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">33
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">31.03.2019 21:50
+<tr>
+<td class="cntr col-fixed"><b>210325</b>
+<td class="cntr">81
+<td class="cntr">79
+<td class="cntr">5
+<td class="cntr">31
+<td class="cntr">46
+<td class="cntr">4
+<td class="cntr">50
+<td class="cntr">0
+<td class="cntr">50
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">10
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">26
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">31.03.2019 21:00
+<tr>
+<td class="cntr col-fixed"><b>210327</b>
+<td class="cntr">549
+<td class="cntr">544
+<td class="cntr">18
+<td class="cntr">210
+<td class="cntr">321
+<td class="cntr">18
+<td class="cntr">339
+<td class="cntr">0
+<td class="cntr">339
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">22
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">108
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">21
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">102
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">54
+<td class="cntr">4
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">31.03.2019 22:00
+<tr>
+<td class="cntr col-fixed"><b>210328</b>
+<td class="cntr">204
+<td class="cntr">204
+<td class="cntr">5
+<td class="cntr">101
+<td class="cntr">98
+<td class="cntr">5
+<td class="cntr">103
+<td class="cntr">0
+<td class="cntr">103
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">28
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">39
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">01.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>210332</b>
+<td class="cntr">711
+<td class="cntr">704
+<td class="cntr">18
+<td class="cntr">198
+<td class="cntr">495
+<td class="cntr">18
+<td class="cntr">513
+<td class="cntr">0
+<td class="cntr">513
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">40
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">12
+<td class="cntr">0
+<td class="cntr">22
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">174
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">58
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">67
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">2
+<td class="cntr">4
+<td class="cntr">106
+<td class="cntr">3
+<td class="cntr">2
+<td class="cntr">3
+<td class="cntr">01.04.2019 01:25
+<tr>
+<td class="cntr col-fixed"><b>210334</b>
+<td class="cntr">1083
+<td class="cntr">1079
+<td class="cntr">36
+<td class="cntr">419
+<td class="cntr">635
+<td class="cntr">29
+<td class="cntr">664
+<td class="cntr">0
+<td class="cntr">664
+<td class="cntr">9
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">23
+<td class="cntr">19
+<td class="cntr">1
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">27
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">310
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">3
+<td class="cntr">18
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">52
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">15
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">150
+<td class="cntr">11
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">01.04.2019 00:50
+<tr>
+<td class="cntr col-fixed"><b>210339</b>
+<td class="cntr">732
+<td class="cntr">728
+<td class="cntr">31
+<td class="cntr">299
+<td class="cntr">408
+<td class="cntr">25
+<td class="cntr">433
+<td class="cntr">0
+<td class="cntr">433
+<td class="cntr">7
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">25
+<td class="cntr">29
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">23
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">167
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">34
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">58
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">58
+<td class="cntr">3
+<td class="cntr">1
+<td class="cntr">5
+<td class="cntr">01.04.2019 00:20
+<tr>
+<td class="cntr col-fixed"><b>210347</b>
+<td class="cntr">132
+<td class="cntr">82
+<td class="cntr">1
+<td class="cntr">50
+<td class="cntr">81
+<td class="cntr">1
+<td class="cntr">82
+<td class="cntr">0
+<td class="cntr">82
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">21
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">38
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">31.03.2019 22:30
+<tr>
+<td class="cntr col-fixed"><b>210348</b>
+<td class="cntr">282
+<td class="cntr">281
+<td class="cntr">12
+<td class="cntr">92
+<td class="cntr">178
+<td class="cntr">12
+<td class="cntr">190
+<td class="cntr">0
+<td class="cntr">190
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">43
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">14
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">82
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">19
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">01.04.2019 00:30
+<tr>
+<td class="cntr col-fixed"><b>210349</b>
+<td class="cntr">51
+<td class="cntr">52
+<td class="cntr">2
+<td class="cntr">16
+<td class="cntr">33
+<td class="cntr">2
+<td class="cntr">35
+<td class="cntr">0
+<td class="cntr">35
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">14
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">01.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>210353</b>
+<td class="cntr">828
+<td class="cntr">821
+<td class="cntr">12
+<td class="cntr">408
+<td class="cntr">415
+<td class="cntr">5
+<td class="cntr">420
+<td class="cntr">0
+<td class="cntr">420
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">28
+<td class="cntr">3
+<td class="cntr">1
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">28
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">194
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">25
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">33
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">12
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">68
+<td class="cntr">3
+<td class="cntr">2
+<td class="cntr">6
+<td class="cntr">01.04.2019 00:26
+<tr>
+<td class="cntr col-fixed"><b>210354</b>
+<td class="cntr">303
+<td class="cntr">309
+<td class="cntr">4
+<td class="cntr">147
+<td class="cntr">153
+<td class="cntr">3
+<td class="cntr">156
+<td class="cntr">0
+<td class="cntr">156
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">57
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">12
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">15
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">14
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">31
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">31.03.2019 22:00
+<tr>
+<td class="cntr col-fixed"><b>210356</b>
+<td class="cntr">1626
+<td class="cntr">1619
+<td class="cntr">23
+<td class="cntr">1152
+<td class="cntr">451
+<td class="cntr">23
+<td class="cntr">474
+<td class="cntr">0
+<td class="cntr">474
+<td class="cntr">54
+<td class="cntr">1
+<td class="cntr">5
+<td class="cntr">2
+<td class="cntr">7
+<td class="cntr">28
+<td class="cntr">9
+<td class="cntr">3
+<td class="cntr">19
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">157
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">18
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">107
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">34
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">01.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>210357</b>
+<td class="cntr">735
+<td class="cntr">734
+<td class="cntr">19
+<td class="cntr">294
+<td class="cntr">422
+<td class="cntr">19
+<td class="cntr">441
+<td class="cntr">0
+<td class="cntr">441
+<td class="cntr">12
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">24
+<td class="cntr">25
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">17
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">144
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">37
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">60
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">87
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">9
+<td class="cntr">31.03.2019 23:12
+<tr>
+<td class="cntr col-fixed"><b>210358</b>
+<td class="cntr">183
+<td class="cntr">185
+<td class="cntr">7
+<td class="cntr">64
+<td class="cntr">112
+<td class="cntr">7
+<td class="cntr">119
+<td class="cntr">0
+<td class="cntr">119
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">6
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">47
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">32
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">20
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">01.04.2019 00:30
+<tr>
+<td class="cntr col-fixed"><b>210359</b>
+<td class="cntr">1200
+<td class="cntr">1195
+<td class="cntr">25
+<td class="cntr">656
+<td class="cntr">519
+<td class="cntr">25
+<td class="cntr">544
+<td class="cntr">0
+<td class="cntr">544
+<td class="cntr">10
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">25
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">41
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">243
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">47
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">57
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">12
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">74
+<td class="cntr">8
+<td class="cntr">1
+<td class="cntr">7
+<td class="cntr">01.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>210360</b>
+<td class="cntr">1422
+<td class="cntr">1410
+<td class="cntr">14
+<td class="cntr">813
+<td class="cntr">600
+<td class="cntr">9
+<td class="cntr">609
+<td class="cntr">13
+<td class="cntr">600
+<td class="cntr">13
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">3
+<td class="cntr">2
+<td class="cntr">22
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">3
+<td class="cntr">53
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">289
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">32
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">54
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">10
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">91
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">3
+<td class="cntr">01.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>210361</b>
+<td class="cntr">1146
+<td class="cntr">1139
+<td class="cntr">8
+<td class="cntr">790
+<td class="cntr">349
+<td class="cntr">7
+<td class="cntr">356
+<td class="cntr">0
+<td class="cntr">356
+<td class="cntr">7
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">87
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">24
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">2
+<td class="cntr">4
+<td class="cntr">1
+<td class="cntr">158
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">33
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">4
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">01.04.2019 00:49
+<tr>
+<td class="cntr col-fixed"><b>210363</b>
+<td class="cntr">345
+<td class="cntr">348
+<td class="cntr">5
+<td class="cntr">114
+<td class="cntr">227
+<td class="cntr">4
+<td class="cntr">231
+<td class="cntr">0
+<td class="cntr">231
+<td class="cntr">4
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">17
+<td class="cntr">19
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">91
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">15
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">35
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">20
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">13
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">01.04.2019 00:55
+<tr>
+<td class="cntr col-fixed"><b>210365</b>
+<td class="cntr">204
+<td class="cntr">203
+<td class="cntr">4
+<td class="cntr">60
+<td class="cntr">140
+<td class="cntr">4
+<td class="cntr">144
+<td class="cntr">0
+<td class="cntr">144
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">50
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">12
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">18
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">35
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">01.04.2019 00:08
+<tr>
+<td class="cntr col-fixed"><b>210678</b>
+<td class="cntr">2391
+<td class="cntr">2368
+<td class="cntr">7
+<td class="cntr">929
+<td class="cntr">1456
+<td class="cntr">6
+<td class="cntr">1462
+<td class="cntr">0
+<td class="cntr">1462
+<td class="cntr">41
+<td class="cntr">3
+<td class="cntr">6
+<td class="cntr">8
+<td class="cntr">1
+<td class="cntr">111
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">25
+<td class="cntr">0
+<td class="cntr">122
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">609
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">15
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">33
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">173
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">116
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">158
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">14
+<td class="cntr">01.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>210685</b>
+<td class="cntr">1239
+<td class="cntr">1271
+<td class="cntr">4
+<td class="cntr">532
+<td class="cntr">705
+<td class="cntr">2
+<td class="cntr">707
+<td class="cntr">0
+<td class="cntr">707
+<td class="cntr">11
+<td class="cntr">3
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">62
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">18
+<td class="cntr">0
+<td class="cntr">43
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">301
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">10
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">3
+<td class="cntr">18
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">98
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">45
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">71
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">6
+<td class="cntr">01.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>210686</b>
+<td class="cntr">816
+<td class="cntr">823
+<td class="cntr">2
+<td class="cntr">411
+<td class="cntr">403
+<td class="cntr">2
+<td class="cntr">405
+<td class="cntr">0
+<td class="cntr">405
+<td class="cntr">14
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">37
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">29
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">158
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">10
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">45
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">39
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">43
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">01.04.2019 05:13
+<tr>
+<td class="cntr col-fixed"><b>210690</b>
+<td class="cntr">1914
+<td class="cntr">1900
+<td class="cntr">7
+<td class="cntr">824
+<td class="cntr">1088
+<td class="cntr">2
+<td class="cntr">1090
+<td class="cntr">0
+<td class="cntr">1090
+<td class="cntr">27
+<td class="cntr">1
+<td class="cntr">3
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">70
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">22
+<td class="cntr">1
+<td class="cntr">90
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">415
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">22
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">40
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">117
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">70
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">164
+<td class="cntr">10
+<td class="cntr">6
+<td class="cntr">9
+<td class="cntr">01.04.2019 00:16
+<tr>
+<td class="cntr col-fixed"><b>210693</b>
+<td class="cntr">1572
+<td class="cntr">1565
+<td class="cntr">0
+<td class="cntr">818
+<td class="cntr">754
+<td class="cntr">0
+<td class="cntr">754
+<td class="cntr">0
+<td class="cntr">754
+<td class="cntr">16
+<td class="cntr">2
+<td class="cntr">3
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">65
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">12
+<td class="cntr">1
+<td class="cntr">41
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">330
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">20
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">76
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">58
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">94
+<td class="cntr">13
+<td class="cntr">1
+<td class="cntr">5
+<td class="cntr">01.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>210694</b>
+<td class="cntr">1581
+<td class="cntr">1572
+<td class="cntr">0
+<td class="cntr">766
+<td class="cntr">815
+<td class="cntr">0
+<td class="cntr">815
+<td class="cntr">0
+<td class="cntr">815
+<td class="cntr">13
+<td class="cntr">3
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">46
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">11
+<td class="cntr">0
+<td class="cntr">47
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">352
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">17
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">34
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">96
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">73
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">94
+<td class="cntr">5
+<td class="cntr">1
+<td class="cntr">12
+<td class="cntr">31.03.2019 23:50
+<tr>
+<td class="cntr col-fixed"><b>210695</b>
+<td class="cntr">1443
+<td class="cntr">1429
+<td class="cntr">3
+<td class="cntr">791
+<td class="cntr">649
+<td class="cntr">3
+<td class="cntr">652
+<td class="cntr">0
+<td class="cntr">652
+<td class="cntr">16
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">2
+<td class="cntr">1
+<td class="cntr">43
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">36
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">281
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">31
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">73
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">40
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">93
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">01.04.2019 00:30
+<tr>
+<td class="cntr col-fixed"><b>210698</b>
+<td class="cntr">2004
+<td class="cntr">2056
+<td class="cntr">69
+<td class="cntr">965
+<td class="cntr">978
+<td class="cntr">61
+<td class="cntr">1039
+<td class="cntr">0
+<td class="cntr">1039
+<td class="cntr">47
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">90
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">23
+<td class="cntr">0
+<td class="cntr">59
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">437
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">10
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">39
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">116
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">79
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">107
+<td class="cntr">11
+<td class="cntr">0
+<td class="cntr">10
+<td class="cntr">01.04.2019 00:15
+<tr>
+<td class="cntr col-fixed"><b>210700</b>
+<td class="cntr">1140
+<td class="cntr">1133
+<td class="cntr">2
+<td class="cntr">530
+<td class="cntr">608
+<td class="cntr">2
+<td class="cntr">610
+<td class="cntr">0
+<td class="cntr">610
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">4
+<td class="cntr">2
+<td class="cntr">53
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">8
+<td class="cntr">0
+<td class="cntr">45
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">277
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">15
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">59
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">40
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">79
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">2
+<td class="cntr">01.04.2019 00:15
+<tr>
+<td class="cntr col-fixed"><b>210703</b>
+<td class="cntr">1761
+<td class="cntr">1741
+<td class="cntr">3
+<td class="cntr">715
+<td class="cntr">1043
+<td class="cntr">3
+<td class="cntr">1046
+<td class="cntr">0
+<td class="cntr">1046
+<td class="cntr">21
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">5
+<td class="cntr">1
+<td class="cntr">174
+<td class="cntr">6
+<td class="cntr">0
+<td class="cntr">20
+<td class="cntr">0
+<td class="cntr">67
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">408
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">25
+<td class="cntr">3
+<td class="cntr">5
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">111
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">82
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">92
+<td class="cntr">4
+<td class="cntr">1
+<td class="cntr">6
+<td class="cntr">31.03.2019 22:30
+<tr>
+<td class="cntr col-fixed"><b>210705</b>
+<td class="cntr">2013
+<td class="cntr">1998
+<td class="cntr">8
+<td class="cntr">838
+<td class="cntr">1169
+<td class="cntr">6
+<td class="cntr">1175
+<td class="cntr">0
+<td class="cntr">1175
+<td class="cntr">17
+<td class="cntr">2
+<td class="cntr">3
+<td class="cntr">3
+<td class="cntr">1
+<td class="cntr">185
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">30
+<td class="cntr">0
+<td class="cntr">75
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">468
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">10
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">29
+<td class="cntr">1
+<td class="cntr">3
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">111
+<td class="cntr">1
+<td class="cntr">3
+<td class="cntr">83
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">119
+<td class="cntr">9
+<td class="cntr">2
+<td class="cntr">10
+<td class="cntr">01.04.2019 01:15
+<tr>
+<td class="cntr col-fixed"><b>210707</b>
+<td class="cntr">1458
+<td class="cntr">1457
+<td class="cntr">6
+<td class="cntr">641
+<td class="cntr">812
+<td class="cntr">5
+<td class="cntr">817
+<td class="cntr">0
+<td class="cntr">817
+<td class="cntr">14
+<td class="cntr">5
+<td class="cntr">5
+<td class="cntr">4
+<td class="cntr">0
+<td class="cntr">92
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">18
+<td class="cntr">0
+<td class="cntr">49
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">339
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">7
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">1
+<td class="cntr">43
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">82
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">53
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">81
+<td class="cntr">15
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">01.04.2019 00:43
+<tr>
+<td class="cntr col-fixed"><b>210710</b>
+<td class="cntr">1269
+<td class="cntr">1262
+<td class="cntr">1
+<td class="cntr">501
+<td class="cntr">767
+<td class="cntr">1
+<td class="cntr">768
+<td class="cntr">0
+<td class="cntr">768
+<td class="cntr">15
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">48
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">1
+<td class="cntr">52
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">1
+<td class="cntr">360
+<td class="cntr">1
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">9
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">3
+<td class="cntr">20
+<td class="cntr">1
+<td class="cntr">2
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">2
+<td class="cntr">125
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">51
+<td class="cntr">0
+<td class="cntr">0
+<td class="cntr">51
+<td class="cntr">4
+<td class="cntr">3
+<td class="cntr">8
+<td class="cntr">01.04.2019 02:48
+</table>
+</div>
+</main>
+</div>
+<footer>
+<div id = "footalert">Представлені оперативні дані і документація носять інформаційний характер і не можуть використовуватись як офіційні документи. <br/>
+При повному або частковому використанні інформації, розміщеної на web-сайті, посилання на джерело інформації обов’язкове.</div>
+<p class="copyright">© WWW ІАС "Вибори Президента України"</p>
+</footer>
+</body>
+</html>
