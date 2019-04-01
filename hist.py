@@ -8,6 +8,7 @@ for i in range(101):
 
 poroshenkoBins = [0.0]*101
 timoshenkoBins = [0.0]*101
+zelenskiyBins = [0.0]*101
 
 with open("data.csv", "r") as f:
     csvReader = csv.reader(f)
@@ -17,13 +18,16 @@ with open("data.csv", "r") as f:
         votes = int(row[6])
         poroshenko = int(row[39])
         timoshenko = int(row[45])
+        zelenskiy = int(row[23])
         assert poroshenko <= votes
         assert timoshenko <= votes
-        # print(total, votes, poroshenko, timoshenko)
+        assert zelenskiy <= votes
+        # print(total, votes, poroshenko, timoshenko, zelenskiy)
         if votes:
             turnover = float(votes)/total
             poroshenkoRatio = float(poroshenko)/float(votes)
             timoshenkoRatio = float(timoshenko)/float(votes)
+            zelenskiyRatio = float(zelenskiy)/float(votes)
             bn = int(turnover * 100.)
             bins[bn][0] += 1
             bins[bn][1] += poroshenko
@@ -34,6 +38,8 @@ with open("data.csv", "r") as f:
             poroshenkoBins[poroshenkoBin] += poroshenko
             timoshenkoBin = int(100.0 * timoshenkoRatio)
             timoshenkoBins[timoshenkoBin] += timoshenko
+            zelenskiyBin = int(100.0 * zelenskiyRatio)
+            zelenskiyBins[zelenskiyBin] += zelenskiy
 
 with open("pt.tsv", "w") as f:
     for i in range(101):
@@ -42,4 +48,4 @@ with open("pt.tsv", "w") as f:
 
 with open("p.tsv", "w") as f:
     for i in range(101):
-        print(i, poroshenkoBins[i], timoshenkoBins[i], file=f)
+        print(i, poroshenkoBins[i], timoshenkoBins[i], zelenskiyBins[i], file=f)
