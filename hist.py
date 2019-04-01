@@ -59,11 +59,24 @@ with open("data.csv", "r") as f:
             zelenskiyBins[zelenskiyBin] += zelenskiy
 
 plt.scatter(aturnover, aporoshenko, color='red', s=7, label="Poroshenko")
-plt.scatter(aturnover, atimoshenko, color='yellow', s=7, label="Timoshenko")
+plt.scatter(aturnover, atimoshenko, color='blue', s=7, label="Timoshenko")
 plt.scatter(aturnover, azelenskiy, color='green', s=7, label="Zelenskiy")
 plt.legend()
 plt.show()
 plt.savefig("ptz.png", dpi=300)
+
+abins = []
+for i in range(101):
+    abins.append(i)
+
+plt.clf()
+plt.plot(abins, poroshenkoBins, color='red', label="Poroshenko")
+plt.plot(abins, timoshenkoBins, color='blue', label="Timoshenko")
+plt.plot(abins, zelenskiyBins, color='green', label="Zelenskiy")
+plt.legend()
+plt.suptitle("Ukraine")
+plt.savefig("ptzAll.png", dpi=300)
+plt.show()
 
 with open("pt.tsv", "w") as f:
     for i in range(101):
