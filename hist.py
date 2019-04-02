@@ -10,6 +10,7 @@ for i in range(101):
 poroshenkoBins = [0.0]*101
 timoshenkoBins = [0.0]*101
 zelenskiyBins = [0.0]*101
+boikoBins = [0.0]*101
 
 fPoroshenko = open("poroshenko.tsv", "w")
 fTimoshenko = open("timoshenko.tsv", "w")
@@ -28,10 +29,13 @@ with open("data.csv", "r") as f:
         poroshenko = int(row[39])
         timoshenko = int(row[45])
         zelenskiy = int(row[23])
+        boiko = int(row[14])
+        assert votes <= total
         assert poroshenko <= votes
         assert timoshenko <= votes
         assert zelenskiy <= votes
-        # print(total, votes, poroshenko, timoshenko, zelenskiy)
+        assert boiko <= votes
+        # print(total, votes, poroshenko, timoshenko, zelenskiy, boiko)
         if votes:
             turnover = float(votes)/total
             aturnover.append(turnover)
@@ -44,6 +48,7 @@ with open("data.csv", "r") as f:
             poroshenkoRatio = float(poroshenko)/float(votes)
             timoshenkoRatio = float(timoshenko)/float(votes)
             zelenskiyRatio = float(zelenskiy)/float(votes)
+            boikoRatio = float(boiko)/float(votes)
             bn = int(turnover * 100.)
             bins[bn][0] += 1
             bins[bn][1] += poroshenko
@@ -57,6 +62,8 @@ with open("data.csv", "r") as f:
             timoshenkoBins[timoshenkoBin] += timoshenko
             zelenskiyBin = int(100.0 * zelenskiyRatio)
             zelenskiyBins[zelenskiyBin] += zelenskiy
+            boikoBin = int(100.0 * boikoRatio)
+            boikoBins[boikoBin] += boiko
 
 plt.scatter(aturnover, aporoshenko, color='red', s=7, label="Poroshenko")
 plt.scatter(aturnover, atimoshenko, color='blue', s=7, label="Timoshenko")
@@ -73,6 +80,7 @@ plt.clf()
 plt.plot(abins, poroshenkoBins, color='red', label="Poroshenko")
 plt.plot(abins, timoshenkoBins, color='blue', label="Timoshenko")
 plt.plot(abins, zelenskiyBins, color='green', label="Zelenskiy")
+plt.plot(abins, boikoBins, color='black', label="Boiko")
 plt.legend()
 plt.suptitle("Ukraine")
 plt.savefig("ptzAll.png", dpi=300)
