@@ -30,6 +30,8 @@ with open("table_227_level_3.tsv", "r") as f:
             putinRatio = float(putin)/float(votes)
             putinBin = int(100.0 * putinRatio)
             if region + str(number) in sKoibs:
+                if putinBin > 89 and putinBin < 95:
+                    print(region, number, putin)
                 putinKoibBins[putinBin] += putin
             else:
                 putinBins[putinBin] += putin
