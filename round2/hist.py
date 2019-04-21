@@ -7,8 +7,10 @@ bins = []
 for i in range(101):
     bins.append([0, 0, 0, 0, 0, 0, 0])
 
-poroshenkoBins = [0.0]*101
-zelenskiyBins = [0.0]*101
+NBINS = 50
+
+poroshenkoBins = [0.0]*(NBINS + 1)
+zelenskiyBins = [0.0]*(NBINS + 1)
 
 fPoroshenko = open("poroshenko.tsv", "w")
 fZelenskiy = open("zelenskiy.tsv", "w")
@@ -43,9 +45,9 @@ with open("data.csv", "r") as f:
             bins[bn][2] += zelenskiy
             bins[bn][3] += poroshenkoRatio
             bins[bn][4] += zelenskiyRatio
-            poroshenkoBin = int(100.0 * poroshenkoRatio)
+            poroshenkoBin = int(float(NBINS) * poroshenkoRatio)
             poroshenkoBins[poroshenkoBin] += poroshenko
-            zelenskiyBin = int(100.0 * zelenskiyRatio)
+            zelenskiyBin = int(float(NBINS) * zelenskiyRatio)
             zelenskiyBins[zelenskiyBin] += zelenskiy
 
 plt.scatter(aturnover, aporoshenko, color='red', s=7, label="Poroshenko")
@@ -55,8 +57,8 @@ plt.show()
 plt.savefig("ptz.png", dpi=300)
 
 abins = []
-for i in range(101):
-    abins.append(i)
+for i in range(NBINS + 1):
+    abins.append(i*(100.0)/NBINS)
 
 plt.clf()
 plt.plot(abins, poroshenkoBins, color='red', label="Poroshenko")
@@ -67,10 +69,10 @@ plt.savefig("ptzAll.png", dpi=300)
 plt.show()
 
 with open("pt.tsv", "w") as f:
-    for i in range(101):
+    for i in range(NBINS + 1):
         if bins[i][0]:
-            print(i, bins[i][0]*100, bins[i][1], bins[i][2], bins[i][3], bins[i][4]/bins[i][0], bins[i][5]/bins[i][0], file=f)
+            print(i, bins[i][0]*100., bins[i][1], bins[i][2], bins[i][3], bins[i][4]/bins[i][0], bins[i][5]/bins[i][0], file=f)
 
 with open("p.tsv", "w") as f:
-    for i in range(101):
+    for i in range(NBINS + 1):
         print(i, poroshenkoBins[i], zelenskiyBins[i], file=f)
