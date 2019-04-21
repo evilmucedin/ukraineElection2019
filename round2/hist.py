@@ -11,8 +11,8 @@ NBINS = 50
 
 poroshenkoBins = [0.0]*(NBINS + 1)
 zelenskiyBins = [0.0]*(NBINS + 1)
-poroshenkoTurnoverBins = [0.0]*(NBINS + 1)
-zelenskiyTurnoverBins = [0.0]*(NBINS + 1)
+poroshenkoTurnoutBins = [0.0]*(NBINS + 1)
+zelenskiyTurnoutBins = [0.0]*(NBINS + 1)
 
 fPoroshenko = open("poroshenko.tsv", "w")
 fZelenskiy = open("zelenskiy.tsv", "w")
@@ -50,10 +50,10 @@ with open("data.csv", "r") as f:
             turnoutBin = int(float(NBINS) * turnout)
             poroshenkoBin = int(float(NBINS) * poroshenkoRatio)
             poroshenkoBins[poroshenkoBin] += poroshenko
-            poroshenkoTurnoverBins[turnoutBin] += poroshenko
+            poroshenkoTurnoutBins[turnoutBin] += poroshenko
             zelenskiyBin = int(float(NBINS) * zelenskiyRatio)
             zelenskiyBins[zelenskiyBin] += zelenskiy
-            zelenskiyTurnoverBins[turnoutBin] += zelenskiy
+            zelenskiyTurnoutBins[turnoutBin] += zelenskiy
 
 plt.scatter(aturnout, aporoshenko, color='red', s=7, label="Poroshenko")
 plt.scatter(aturnout, azelenskiy, color='green', s=7, label="Zelenskiy")
@@ -67,12 +67,12 @@ abins = []
 for i in range(NBINS + 1):
     abins.append(i*(100.0)/NBINS)
 
-plt.plot(abins, poroshenkoTurnoverBins, color='red', label="Poroshenko")
-plt.plot(abins, zelenskiyTurnoverBins, color='green', label="Zelenskiy")
+plt.plot(abins, poroshenkoTurnoutBins, color='red', label="Poroshenko")
+plt.plot(abins, zelenskiyTurnoutBins, color='green', label="Zelenskiy")
 plt.xlabel("Turnout")
 plt.ylabel("#Votes")
 plt.legend()
-plt.savefig("ptzTurnover.png", dpi=300)
+plt.savefig("ptzTurnout.png", dpi=300)
 plt.show()
 
 plt.clf()

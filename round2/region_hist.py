@@ -12,7 +12,9 @@ regionname = {}
 def createBins():
     poroshenkoBins = [0.0]*101
     zelenskiyBins = [0.0]*101
-    return [poroshenkoBins, zelenskiyBins]
+    poroshenkoTurnoutBins = [0.0]*101
+    zelenskiyTurnoutBins = [0.0]*101
+    return [poroshenkoBins, zelenskiyBins, poroshenkoTurnoutBins, zelenskiyTurnoutBins]
 
 regions = {}
 for i in range(-1, 100):
@@ -33,13 +35,16 @@ with open("data.csv", "r") as f:
         aregion = regions[region]
         # print(total, votes, poroshenko, timoshenko, zelenskiy)
         if votes:
+            turnout = float(votes)/total
             poroshenkoRatio = float(poroshenko)/float(votes)
             zelenskiyRatio = float(zelenskiy)/float(votes)
             poroshenkoBin = int(100.0 * poroshenkoRatio)
+            turnoutBin = int(100.0 * turnout)
             aregion[0][poroshenkoBin] += poroshenko
             zelenskiyBin = int(100.0 * zelenskiyRatio)
             aregion[1][zelenskiyBin] += zelenskiy
-
+            aregion[2][turnoutBin] += poroshenko
+            aregion[3][turnoutBin] += zelenskiy
 bins = []
 for i in range(101):
     bins.append(i)
@@ -53,4 +58,15 @@ for region in regions.keys():
     plt.scatter(bins, aregion[1], color='green', s=7, label="Zelenskiy")
     plt.legend()
     plt.suptitle(regionname[region])
+    plt.xlabel("Votes% for the candidate")
+    plt.ylabel("#Votes")
     plt.savefig("ptz.%s.png" % regionname[region], dpi=300)
+    
+    plt.clf()
+    plt.plot(bins, aregion[2], color='red', label="Poroshenko")
+    plt.plot(bins, aregion[3], color='green', label="Zelenskiy")
+    plt.legend()
+    plt.suptitle(regionname[region])
+    plt.xlabel("Turnout")
+    plt.ylabel("#Votes")
+    plt.savefig("ptzTurnout.%s.png" % regionname[region], dpi=300)

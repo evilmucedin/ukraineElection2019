@@ -4,6 +4,7 @@ import os
 import csv
 
 headerPrinted = False
+count = 0
 
 region = {}
 regionname = {}
@@ -18,12 +19,12 @@ def m(s, b, e):
 
 m("Vinnitsa", 11, 18)
 m("Volyn", 19, 23)
-m("Dnipro", 24, 40)
+m("Dnepr", 24, 40)
 m("Donetsk", 45, 60)
 m("Zhitomir", 62, 67)
-m("Zakarpat", 68, 73)
-m("Zaporozh", 74, 82)
-m("Ivano-Frank", 83, 89)
+m("Zakarpatie", 68, 73)
+m("Zaporozhie", 74, 82)
+m("Ivano-Frankovsk", 83, 89)
 m("Kiev", 90, 98)
 m("Kirov", 99, 103)
 m("Lugansk", 105, 114)
@@ -31,7 +32,7 @@ m("Lvov", 115, 126)
 m("Nikolaev", 127, 132)
 m("Odessa", 133, 143)
 m("Poltava", 144, 151)
-m("Rivno", 152, 156)
+m("Rovno", 152, 156)
 m("Sumy", 157, 162)
 m("Ternopol", 163, 167)
 m("Harkov", 168, 181)
@@ -52,6 +53,7 @@ def main():
 
         def writeRow(row):
             global headerPrinted
+            global count
             if len(row) != 0:
                 row.append(str(i))
                 if i in region:
@@ -67,6 +69,7 @@ def main():
                         headerPrinted = True
                 else:
                     outCsv.writerow(row)
+                    count += 1
 
         row = []
         for line in open(filename):
@@ -83,6 +86,7 @@ def main():
 
         writeRow(row)
         print(i)
+    print("Total = %d" % count)
 
 if __name__ == "__main__":
     main()

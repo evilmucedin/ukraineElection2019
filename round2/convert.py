@@ -4,6 +4,7 @@ import os
 import csv
 
 headerPrinted = False
+count = 0
 
 region = {}
 regionname = {}
@@ -52,6 +53,7 @@ def main():
 
         def writeRow(row):
             global headerPrinted
+            global count
             if len(row) != 0:
                 row.append(str(i))
                 if i in region:
@@ -67,6 +69,7 @@ def main():
                         headerPrinted = True
                 else:
                     outCsv.writerow(row)
+                    count += 1
 
         row = []
         for line in open(filename):
@@ -83,6 +86,7 @@ def main():
 
         writeRow(row)
         print(i)
+    print("Total = %d" % count)
 
 if __name__ == "__main__":
     main()
