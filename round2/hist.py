@@ -11,6 +11,8 @@ NBINS = 50
 
 poroshenkoBins = [0.0]*(NBINS + 1)
 zelenskiyBins = [0.0]*(NBINS + 1)
+poroshenkoTurnoverBins = [0.0]*(NBINS + 1)
+zelenskiyTurnoverBins = [0.0]*(NBINS + 1)
 
 fPoroshenko = open("poroshenko.tsv", "w")
 fZelenskiy = open("zelenskiy.tsv", "w")
@@ -45,10 +47,13 @@ with open("data.csv", "r") as f:
             bins[bn][2] += zelenskiy
             bins[bn][3] += poroshenkoRatio
             bins[bn][4] += zelenskiyRatio
+            turnoverBin = int(float(NBINS) * turnover)
             poroshenkoBin = int(float(NBINS) * poroshenkoRatio)
             poroshenkoBins[poroshenkoBin] += poroshenko
+            poroshenkoTurnoverBins[turnoverBin] += poroshenko
             zelenskiyBin = int(float(NBINS) * zelenskiyRatio)
             zelenskiyBins[zelenskiyBin] += zelenskiy
+            zelenskiyTurnoverBins[turnoverBin] += zelenskiy
 
 plt.scatter(aturnover, aporoshenko, color='red', s=7, label="Poroshenko")
 plt.scatter(aturnover, azelenskiy, color='green', s=7, label="Zelenskiy")
@@ -59,6 +64,12 @@ plt.savefig("ptz.png", dpi=300)
 abins = []
 for i in range(NBINS + 1):
     abins.append(i*(100.0)/NBINS)
+
+plt.plot(abins, poroshenkoTurnoverBins, color='red', label="Poroshenko")
+plt.plot(abins, zelenskiyTurnoverBins, color='green', label="Zelenskiy")
+plt.legend()
+plt.show()
+plt.savefig("ptzTurnover.png", dpi=300)
 
 plt.clf()
 plt.plot(abins, poroshenkoBins, color='red', label="Poroshenko")
