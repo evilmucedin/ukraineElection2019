@@ -57,6 +57,8 @@ with open("data.csv", "r") as f:
 
 plt.scatter(aturnover, aporoshenko, color='red', s=7, label="Poroshenko")
 plt.scatter(aturnover, azelenskiy, color='green', s=7, label="Zelenskiy")
+plt.xlabel("Turnout")
+plt.ylabel("#Votes")
 plt.legend()
 plt.show()
 plt.savefig("ptz.png", dpi=300)
@@ -67,6 +69,8 @@ for i in range(NBINS + 1):
 
 plt.plot(abins, poroshenkoTurnoverBins, color='red', label="Poroshenko")
 plt.plot(abins, zelenskiyTurnoverBins, color='green', label="Zelenskiy")
+plt.xlabel("Votes% for the candidate")
+plt.ylabel("#Votes")
 plt.legend()
 plt.show()
 plt.savefig("ptzTurnover.png", dpi=300)
