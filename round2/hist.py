@@ -17,7 +17,7 @@ zelenskiyTurnoverBins = [0.0]*(NBINS + 1)
 fPoroshenko = open("poroshenko.tsv", "w")
 fZelenskiy = open("zelenskiy.tsv", "w")
 
-aturnover = []
+aturnout = []
 aporoshenko = []
 azelenskiy = []
 with open("data.csv", "r") as f:
@@ -33,35 +33,35 @@ with open("data.csv", "r") as f:
         assert zelenskiy <= votes
         # print(total, votes, poroshenko, zelenskiy)
         if votes:
-            turnover = float(votes)/total
-            aturnover.append(turnover)
+            turnout = float(votes)/total
+            aturnout.append(turnout)
             aporoshenko.append(poroshenko)
             azelenskiy.append(zelenskiy)
-            print(turnover, poroshenko, file=fPoroshenko)
-            print(turnover, zelenskiy, file=fZelenskiy)
+            print(turnout, poroshenko, file=fPoroshenko)
+            print(turnout, zelenskiy, file=fZelenskiy)
             poroshenkoRatio = float(poroshenko)/float(votes)
             zelenskiyRatio = float(zelenskiy)/float(votes)
-            bn = int(turnover * 100.)
+            bn = int(turnout * 100.)
             bins[bn][0] += 1
             bins[bn][1] += poroshenko
             bins[bn][2] += zelenskiy
             bins[bn][3] += poroshenkoRatio
             bins[bn][4] += zelenskiyRatio
-            turnoverBin = int(float(NBINS) * turnover)
+            turnoutBin = int(float(NBINS) * turnout)
             poroshenkoBin = int(float(NBINS) * poroshenkoRatio)
             poroshenkoBins[poroshenkoBin] += poroshenko
-            poroshenkoTurnoverBins[turnoverBin] += poroshenko
+            poroshenkoTurnoverBins[turnoutBin] += poroshenko
             zelenskiyBin = int(float(NBINS) * zelenskiyRatio)
             zelenskiyBins[zelenskiyBin] += zelenskiy
-            zelenskiyTurnoverBins[turnoverBin] += zelenskiy
+            zelenskiyTurnoverBins[turnoutBin] += zelenskiy
 
-plt.scatter(aturnover, aporoshenko, color='red', s=7, label="Poroshenko")
-plt.scatter(aturnover, azelenskiy, color='green', s=7, label="Zelenskiy")
+plt.scatter(aturnout, aporoshenko, color='red', s=7, label="Poroshenko")
+plt.scatter(aturnout, azelenskiy, color='green', s=7, label="Zelenskiy")
 plt.xlabel("Turnout")
 plt.ylabel("#Votes")
 plt.legend()
-plt.show()
 plt.savefig("ptz.png", dpi=300)
+plt.show()
 
 abins = []
 for i in range(NBINS + 1):
@@ -69,16 +69,18 @@ for i in range(NBINS + 1):
 
 plt.plot(abins, poroshenkoTurnoverBins, color='red', label="Poroshenko")
 plt.plot(abins, zelenskiyTurnoverBins, color='green', label="Zelenskiy")
-plt.xlabel("Votes% for the candidate")
+plt.xlabel("Turnout")
 plt.ylabel("#Votes")
 plt.legend()
-plt.show()
 plt.savefig("ptzTurnover.png", dpi=300)
+plt.show()
 
 plt.clf()
 plt.plot(abins, poroshenkoBins, color='red', label="Poroshenko")
 plt.plot(abins, zelenskiyBins, color='green', label="Zelenskiy")
 plt.legend()
+plt.xlabel("Votes% for the candidate")
+plt.ylabel("#Votes")
 plt.suptitle("Ukraine")
 plt.savefig("ptzAll.png", dpi=300)
 plt.show()
