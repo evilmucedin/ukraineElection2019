@@ -9,15 +9,39 @@
 <LINK REL=STYLESHEET href="print_css.css" TYPE="text/css">
 <TITLE>Центральна виборча комісія України - WWW відображення ІАС «Вибори Президента України 2019»</TITLE>
 <script type="text/javascript">
-      var clog=console.log;
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
+     var clog = console.log;
+  $(window).resize(function(){resize();});
+  $(document).ready(function(){resize();});
+  
+  function resize(){
+    var sw = $("#switch").parent();
+    if($(window).width() < 768)
+    {
+
+       if (sw[0].nodeName =="A"){
+          sw.removeClass("a1").addClass("a0").prependTo("#myTopnav");
+       } else{
+         $("#switch").appendTo("#myTopnav");
+       }
+    }
+    else
+    {
+       if (sw[0].nodeName =="A"){
+          sw.removeClass("a0").addClass("a1").appendTo("#electName");
+       } else{
+         $("#switch").appendTo("#electName");
+       }
+    }
+  }
+  
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
      </script>
 <style type="text/css">
 
@@ -219,8 +243,13 @@
           display: block;
           text-align: left;
         }
+        
+        .topnav.responsive a.a0 {
+          float: left;
 
-        .topnav.responsive .dropdown {float: none;}
+        }
+
+        .topnav.responsive .dropdown {float: none; clear:left;}
 
         .topnav.responsive .dropdown-content {position: relative; display:block}
 
@@ -235,7 +264,7 @@
         }
 
         .pure-table th{font-size:0.7rem}
-        .txt_rght{display:none;}
+       //.txt_rght{display:none;}
 
        footer{
                margin-top: -50px;
@@ -246,7 +275,29 @@
        #footalert{display:none;}
 
        .Top32{display:none;}
-
+       a.a0:link{
+         margin:15px  0 0 15px ;
+         padding:0;
+         color: #ffff00; 
+         border-bottom: 1px dashed; 
+         text-decoration: none;
+         display:inline-block;
+          
+       }
+       a.a0:visited{
+         color: #ffff00;
+         text-decoration: none;
+        }
+       a.a0:hover {
+         color: #ffff00; 
+         border-bottom: .07em solid;
+         text-decoration: none;
+       }
+       a.a0:active{
+         color:  #ffff00; 
+         border-bottom: 1px dashed;
+         text-decoration: none;
+       }
     }
 
 
@@ -341,6 +392,14 @@
 <a href="wp082pt001f01=719pkindrep=2.html">Фінансові звіти остаточні</a>
 </div>
 </div>
+<div class="dropdown">
+<button class="dropbtn">Відкриті дані
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp404.html">Набори даних</a>
+</div>
+</div>
  <a href="javascript:void(0);" style="font-size:17px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 </header>
@@ -352,7 +411,7 @@
     </div>
 Відомості про підрахунок голосів виборців на виборчих дільницях
 </div>
-    <div style="float: right;"><span class="txt_rght b">Чергові вибори Президента України 31 березня 2019 року</span></div>
+    <div id="electName" style="float: right;"><a class="a1 b" href="wp336pt001f01=720pt005f01=78.html"><span id="switch" class="txt_rght b">Перейти до повторного голосування 21.04.2019</span></a></div>
   </div>
 </div>
 <h2 class="cntr w100 pdd15">Територіальний виборчий округ № 78 (Запорізька область)</h2>
