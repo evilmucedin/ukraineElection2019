@@ -2,17 +2,21 @@
 
 import csv
 import matplotlib.pyplot as plt
+import numpy as np
 
 bins = []
 for i in range(101):
     bins.append([0, 0, 0, 0, 0, 0, 0])
 
 NBINS = 100
+NBINS2 = 10000
 
 poroshenkoBins = [0.0]*(NBINS + 1)
 zelenskiyBins = [0.0]*(NBINS + 1)
 poroshenkoTurnoutBins = [0.0]*(NBINS + 1)
 zelenskiyTurnoutBins = [0.0]*(NBINS + 1)
+poroshenkoTurnoutBins2 = [0.0]*(NBINS2 + 1)
+zelenskiyTurnoutBins2 = [0.0]*(NBINS2 + 1)
 
 fPoroshenko = open("poroshenko.tsv", "w")
 fZelenskiy = open("zelenskiy.tsv", "w")
@@ -54,12 +58,16 @@ with open("data.csv", "r") as f:
             zelenskiyBin = int(float(NBINS) * zelenskiyRatio)
             zelenskiyBins[zelenskiyBin] += zelenskiy
             zelenskiyTurnoutBins[turnoutBin] += zelenskiy
+            turnoutBin2 = int(float(NBINS2) * turnout)
+            poroshenkoTurnoutBins2[turnoutBin2] += poroshenko
+            zelenskiyTurnoutBins2[turnoutBin2] += zelenskiy
 
 plt.scatter(aturnout, aporoshenko, color='red', s=7, label="Poroshenko")
 plt.scatter(aturnout, azelenskiy, color='green', s=7, label="Zelenskiy")
 plt.xlabel("Turnout")
 plt.ylabel("#Votes")
 plt.legend()
+plt.grid(True)
 plt.savefig("ptz.png", dpi=300)
 plt.show()
 
@@ -71,8 +79,23 @@ plt.plot(abins, poroshenkoTurnoutBins, color='red', label="Poroshenko")
 plt.plot(abins, zelenskiyTurnoutBins, color='green', label="Zelenskiy")
 plt.xlabel("Turnout")
 plt.ylabel("#Votes")
+plt.grid(True)
 plt.legend()
 plt.savefig("ptzTurnout.png", dpi=300)
+plt.show()
+
+abins2 = []
+for i in range(NBINS2 + 1):
+    abins2.append(i*(100.0)/NBINS2)
+
+plt.plot(abins2, poroshenkoTurnoutBins2, color='red', label="Poroshenko")
+plt.plot(abins2, zelenskiyTurnoutBins2, color='green', label="Zelenskiy")
+plt.xlabel("Turnout")
+plt.ylabel("#Votes")
+plt.legend()
+plt.grid(True)
+plt.xticks(np.arange(min(abins2), max(abins2), 5.0))
+plt.savefig("ptzTurnout2.png", dpi=300)
 plt.show()
 
 plt.clf()
