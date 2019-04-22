@@ -54,8 +54,8 @@ for region in regions.keys():
         continue
     plt.clf()
     aregion = regions[region]
-    plt.scatter(bins, aregion[0], color='red', s=7, label="Poroshenko")
-    plt.scatter(bins, aregion[1], color='green', s=7, label="Zelenskiy")
+    plt.plot(bins, aregion[0], color='red', label="Poroshenko")
+    plt.plot(bins, aregion[1], color='green', label="Zelenskiy")
     plt.legend()
     plt.suptitle(regionname[region])
     plt.xlabel("Votes% for the candidate")

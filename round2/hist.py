@@ -7,7 +7,7 @@ bins = []
 for i in range(101):
     bins.append([0, 0, 0, 0, 0, 0, 0])
 
-NBINS = 50
+NBINS = 100
 
 poroshenkoBins = [0.0]*(NBINS + 1)
 zelenskiyBins = [0.0]*(NBINS + 1)
