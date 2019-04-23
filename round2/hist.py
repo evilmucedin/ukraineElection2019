@@ -33,6 +33,7 @@ with open("data.csv", "r") as f:
         votes = int(row[6])
         poroshenko = int(row[11])
         zelenskiy = int(row[10])
+        assert poroshenko + zelenskiy <= votes
         assert votes <= total
         assert poroshenko <= votes
         assert zelenskiy <= votes
@@ -60,8 +61,10 @@ with open("data.csv", "r") as f:
             zelenskiyBins[zelenskiyBin] += zelenskiy
             zelenskiyTurnoutBins[turnoutBin] += zelenskiy
             turnoutBin2 = int(float(NBINS2) * turnout)
-            poroshenkoTurnoutBins2[turnoutBin2] += poroshenko
-            zelenskiyTurnoutBins2[turnoutBin2] += zelenskiy
+            poroshenkoBin2 = int(float(NBINS2) * poroshenkoRatio)
+            poroshenkoTurnoutBins2[poroshenkoBin2] += poroshenko
+            zelenskiyBin2 = int(float(NBINS2) * zelenskiyRatio)
+            zelenskiyTurnoutBins2[zelenskiyBin2] += zelenskiy
 
 maxPoroshenko = 0
 maxPoroshenkoIndex = 0
@@ -80,8 +83,8 @@ for i in range(NBINS + 1):
 print("Scale: %f" % scale)
 print("Thrown in: %f" % thrownIn)
 
-plt.scatter(aturnout, aporoshenko, color='red', s=3, label="Poroshenko")
-plt.scatter(aturnout, azelenskiy, color='green', s=3, label="Zelenskiy")
+plt.scatter(aturnout, aporoshenko, color='red', s=1, label="Poroshenko")
+plt.scatter(aturnout, azelenskiy, color='green', s=1, label="Zelenskiy")
 plt.xlabel("Turnout")
 plt.ylabel("#Votes")
 plt.legend()
@@ -106,6 +109,17 @@ plt.show()
 abins2 = []
 for i in range(NBINS2 + 1):
     abins2.append(i*(100.0)/NBINS2)
+
+def smooth(seq):
+    result = [0]*len(seq)
+    result[0] = 0
+    for i in range(len(seq)):
+        result[i] += seq[i]
+        if i - 1 >= 0:
+            result[i] += result[i - 1]
+        if i - 50 >= 0:
+            result[i] -= seq[i - 50]
+    return result
 
 plt.plot(abins2, poroshenkoTurnoutBins2, color='red', label="Poroshenko")
 plt.plot(abins2, zelenskiyTurnoutBins2, color='green', label="Zelenskiy")
