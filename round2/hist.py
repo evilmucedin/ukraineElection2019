@@ -9,12 +9,13 @@ for i in range(101):
     bins.append([0, 0, 0, 0, 0, 0, 0])
 
 NBINS = 100
-NBINS2 = 10000
+NBINS2 = 200
 
 poroshenkoBins = [0.0]*(NBINS + 1)
 zelenskiyBins = [0.0]*(NBINS + 1)
 poroshenkoTurnoutBins = [0.0]*(NBINS + 1)
 zelenskiyTurnoutBins = [0.0]*(NBINS + 1)
+poroshenkoScaledTurnoutBins = [0.0]*(NBINS + 1)
 poroshenkoTurnoutBins2 = [0.0]*(NBINS2 + 1)
 zelenskiyTurnoutBins2 = [0.0]*(NBINS2 + 1)
 
@@ -39,8 +40,8 @@ with open("data.csv", "r") as f:
         if votes:
             turnout = float(votes)/total
             aturnout.append(turnout)
-            aporoshenko.append(poroshenko)
-            azelenskiy.append(zelenskiy)
+            aporoshenko.append(float(poroshenko)/votes)
+            azelenskiy.append(float(zelenskiy)/votes)
             print(turnout, poroshenko, file=fPoroshenko)
             print(turnout, zelenskiy, file=fZelenskiy)
             poroshenkoRatio = float(poroshenko)/float(votes)
@@ -62,8 +63,25 @@ with open("data.csv", "r") as f:
             poroshenkoTurnoutBins2[turnoutBin2] += poroshenko
             zelenskiyTurnoutBins2[turnoutBin2] += zelenskiy
 
-plt.scatter(aturnout, aporoshenko, color='red', s=7, label="Poroshenko")
-plt.scatter(aturnout, azelenskiy, color='green', s=7, label="Zelenskiy")
+maxPoroshenko = 0
+maxPoroshenkoIndex = 0
+for i in range(NBINS + 1):
+    if poroshenkoTurnoutBins[i] > maxPoroshenko:
+        maxPoroshenko = poroshenkoTurnoutBins[i]
+        maxPoroshenkoIndex = i
+scale = float(zelenskiyTurnoutBins[maxPoroshenkoIndex])/poroshenkoTurnoutBins[maxPoroshenkoIndex]
+
+thrownIn = 0
+for i in range(NBINS + 1):
+    poroshenkoScaledTurnoutBins[i] = poroshenkoTurnoutBins[i]*scale
+    if i >= maxPoroshenkoIndex:
+        thrownIn += zelenskiyTurnoutBins[i] - poroshenkoScaledTurnoutBins[i]
+
+print("Scale: %f" % scale)
+print("Thrown in: %f" % thrownIn)
+
+plt.scatter(aturnout, aporoshenko, color='red', s=3, label="Poroshenko")
+plt.scatter(aturnout, azelenskiy, color='green', s=3, label="Zelenskiy")
 plt.xlabel("Turnout")
 plt.ylabel("#Votes")
 plt.legend()
@@ -77,6 +95,7 @@ for i in range(NBINS + 1):
 
 plt.plot(abins, poroshenkoTurnoutBins, color='red', label="Poroshenko")
 plt.plot(abins, zelenskiyTurnoutBins, color='green', label="Zelenskiy")
+plt.plot(abins, poroshenkoScaledTurnoutBins, '-', color='red', label="Poroshenko (scaled)")
 plt.xlabel("Turnout")
 plt.ylabel("#Votes")
 plt.grid(True)
