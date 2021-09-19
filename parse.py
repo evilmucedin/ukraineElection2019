@@ -2,7 +2,7 @@
 
 # HOW TO USE:
 # sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev pkg-config tesseract-ocr-rus
-# pip3 install pyppeteer tesserocr
+# pip3 install pyppeteer tesserocr asyncio
 
 import asyncio
 from pyppeteer import launch
