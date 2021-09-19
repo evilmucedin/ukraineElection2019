@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="img2019/fontawesome/css/all.css">
+<script type="text/javascript" src="img2019/jquery.slim.min.js"></script>
+<link rel="stylesheet" href="img2019/pure-min.css">
+<LINK REL=STYLESHEET href="print_css.css" TYPE="text/css">
+<TITLE>Центральна виборча комісія України - WWW відображення ІАС «Вибори Президента України 2019»</TITLE>
+<script type="text/javascript">
+     var clog = console.log;
+  $(window).resize(function(){resize();});
+  $(document).ready(function(){resize();});
+  
+  function resize(){
+    var sw = $("#switch").parent();
+    if($(window).width() < 768)
+    {
+
+       if (sw[0].nodeName =="A"){
+          sw.removeClass("a1").addClass("a0").prependTo("#myTopnav");
+       } else{
+         $("#switch").appendTo("#myTopnav");
+       }
+    }
+    else
+    {
+       if (sw[0].nodeName =="A"){
+          sw.removeClass("a0").addClass("a1").appendTo("#electName");
+       } else{
+         $("#switch").appendTo("#electName");
+       }
+    }
+  }
+  
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+     </script>
+<style type="text/css">
+
+
+      * {box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font: 16px Verdana, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background: white;
+      }
+
+      #wrap {
+        min-height: 100%;
+        background: #FAFDFE;
+      }
+
+      main {
+        display:block;
+        padding-bottom: 130px;
+        margin:0 90px;
+       }
+
+      header {
+        background: #FAFDFE;
+        text-align: center;
+      }
+
+      header a {
+        display: block;
+        text-decoration: none;
+        outline: none;
+        transition: .3s ease-in-out;
+      }
+
+
+      .logo {
+        color: #485889!important;
+        font-size: 2.1rem;
+        padding: 10px 0;
+
+      }
+
+      .sublogo{
+        display: block;
+        font-size: 1.5rem;
+      }
+
+      footer {
+        background: #1e7387;
+        margin-top: -100px;
+        height: 100px;
+        color: white;
+        text-align:center;
+        padding:30px;
+        font:0.7rem Verdana, Arial, Helvetica, sans-serif;
+      }
+
+
+      .topnav {
+        overflow: hidden;
+        background-color: #1e7387;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 13px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 10px;
+        background-color: #1e7387;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 999;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black !important;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .topnav a:hover, .dropdown:hover .dropbtn {
+        background-color: 	#006080;
+        color: white;
+
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+
+      #top-bar{
+        height:40px;
+        background:linear-gradient(to right, rgba(72,88,152,1) 0%,rgba(72,88,152,1) 48%,rgba(72,88,152,1) 48%,rgba(72,88,152,1) 49%,rgba(72,88,152,1) 49%,rgba(255,127,80,1) 54%,rgba(255,127,80,1) 54%,rgba(255,127,80,1) 55%,rgba(255,127,80,1) 55%,rgba(255,127,80,1) 56%,rgba(255,127,80,1) 100%)
+      }
+
+      .innerTop{
+        height:40px;
+        background-size:cover;
+      }
+
+      .testwork{
+        font-size:0.7rem;
+        padding:5px;
+        font-weight:bold;
+        color:red;
+        text-align:right;
+        margin:0 90px;
+
+      }
+
+     @media screen and (max-width:768px) {
+
+        header{font-size:0.9rem}
+        .topnav a:not(:first-child), .dropdown .dropbtn {
+          display: none;
+        }
+        h3,h2{font-size: 12pt;}
+       .logo{
+        font-size: 1.3rem;
+        padding: 10px 0;
+
+      }
+       .testwork{
+       margin:0;
+       }
+      .sublogo{
+        font-size: 0.8rem;
+      }
+      .innerTop{
+          background-image:none;
+          width:20px;
+       }
+
+        main {
+          margin:0 5px;
+          padding-bottom: 60px;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+
+        .topnav.responsive {position: relative;}
+
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .topnav.responsive a.a0 {
+          float: left;
+
+        }
+
+        .topnav.responsive .dropdown {float: none; clear:left;}
+
+        .topnav.responsive .dropdown-content {position: relative; display:block}
+
+        .topnav.responsive .dropdown .dropbtn {
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+
+        #top-bar{
+          background:#485898;
+        }
+
+        .pure-table th{font-size:0.7rem}
+       //.txt_rght{display:none;}
+
+       footer{
+               margin-top: -50px;
+               height: 50px;
+               padding:15px;
+
+        }
+       #footalert{display:none;}
+
+       .Top32{display:none;}
+       a.a0:link{
+         margin:15px  0 0 15px ;
+         padding:0;
+         color: #ffff00; 
+         border-bottom: 1px dashed; 
+         text-decoration: none;
+         display:inline-block;
+          
+       }
+       a.a0:visited{
+         color: #ffff00;
+         text-decoration: none;
+        }
+       a.a0:hover {
+         color: #ffff00; 
+         border-bottom: .07em solid;
+         text-decoration: none;
+       }
+       a.a0:active{
+         color:  #ffff00; 
+         border-bottom: 1px dashed;
+         text-decoration: none;
+       }
+    }
+
+
+
+
+
+</style>
+</HEAD>
+<BODY>
+<div id="wrap">
+<header>
+<div ><a href="wp001.html" class="logo">Вибори Президента України 2019<span class="sublogo">Центральна виборча комісія</span></a></div>
+<div class="topnav" id="myTopnav">
+<div class="dropdown">
+<button class="dropbtn">Округи, дільниці
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp030pt001f01=720.html">Територіальні виборчі округи</a>
+<a href="wp045pt001f01=720.html">Закордонний виборчий округ</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Кандидати
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp003pt001f01=720.html">Зареєстровані кандидати</a>
+<a href="wp059pt001f01=720.html">Кандидати, реєстрацію яких скасовано</a>
+<a href="wp060pt001f01=720.html">Особи, яким відмовлено в реєстрації</a>
+<a href="wp054pt001f01=720.html">Довірені особи кандидатів</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Окружні комісії
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp055_npt001f01=720.html">Контакти та склад ОВК</a>
+<a href="wp006pt001f01=720.html">Рішення ОВК</a>
+<a href="wp065pt001f01=720.html">Аналітика</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Офіційні спостерігачі
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp142pt001f01=720.html">Від кандидатів на пост Президента</a>
+<a href="wp143pt001f01=720.html">Від політичних партій</a>
+<a href="wp141pt001f01=720.html">Від громадських організацій</a>
+<a href="wp041pt001f01=720.html">Від іноземних держав і міжнародних організацій</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Агітація та ЗМІ
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp051pt001f01=720.html">Результати жеребкування</a>
+<a href="wp049pt001f01=720.html">Акредитовані представники ЗМІ</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Голосування
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp095pt001f01=720pt049f01=0.html">Відомості на початок голосування</a>
+<a href="wp063pt001f01=720.html">Активність виборців</a>
+<a href="wp095pt001f01=720pt049f01=5.html">Відомості на момент закінчення голосування</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Підрахунок та підсумки голосування
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp300pt001f01=720.html">В цілому по Україні</a>
+<a href="wp301pt001f01=720.html">В межах регіонів</a>
+<a href="wp312pt001f01=720.html">В межах закордонного виборчого округу</a>
+<a href="wp335pt001f01=720.html">На виборчих дільницях</a>
+<a href="wp313pt001f01=720.html">Підтримка лідерів в регіонах</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Виборчі фонди
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp082pt001f01=720pkindrep=1.html">Фінансові звіти проміжні </a>
+<a href="wp082pt001f01=720pkindrep=2.html">Фінансові звіти остаточні</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Відкриті дані
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="wp404.html">Набори даних</a>
+</div>
+</div>
+ <a href="javascript:void(0);" style="font-size:17px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</header>
+<main>
+
+<div class="noprint" style="overflow: hidden; padding: 15px 0;">
+  <div style="width: 100%;">
+    <div style="float: left;"><div class="sqr1515">
+    </div>
+Відомості про підрахунок голосів виборців на виборчих дільницях
+</div>
+    <div id="electName" style="float: right;"><a class="a1 b" href="wp336pt001f01=719pt005f01=133.html"><span id="switch" class="txt_rght b">Перейти до голосування 31.03.2019</span></a></div>
+  </div>
+</div>
+<h2 class="cntr w100 pdd15">Територіальний виборчий округ № 133 (Одеська область)</h2>
+<style type="text/css">
+table.pure-table th { font-size:0.7rem; }
+.col-fixed{ position: sticky; left: 0; z-index: 997; }
+th.col-fixed{ background: #e0e0e0 !important; }
+td.col-fixed{ background: #fff !important; }
+.row-fixed{ position: sticky; position: -webkit-sticky; top: 0; z-index: 997; }
+th.row-fixed{ background: #e0e0e0 !important; }
+td.row-fixed{ background: #fff !important; }
+th.row-fixed.col-fixed{ z-index: 998; }
+/*стиль scrollbar*/
+#pure-wrap::-webkit-scrollbar { width: 12px; height: 12px; }
+#pure-wrap::-webkit-scrollbar-track { box-shadow: inset 0 0 5px grey;   border-radius: 4px; }
+#pure-wrap::-webkit-scrollbar-thumb { background: #06116169;   border-radius: 4px; }
+
+</style>
+<div id="pure-wrap" class="w100 pure-u-md-1" style="max-height:40rem; overflow:auto;">
+<table class="pure-table pure-table-horizontal w100" style="border:none;">
+<thead>
+<tr>
+<th class="col-fixed row-fixed">№ ВД
+<th class="row-fixed">1.К-сть одержаних бюлетенів
+<th class="row-fixed">2.К-сть виборців, внесених до списку
+<th class="row-fixed">3.К-сть виборців, внесених до витягу для голос. за місцем перебув.
+<th class="row-fixed">4.К-сть невикор. бюлетенів
+<th class="row-fixed">5.К-сть виборців, які отримали бюлетені у приміщ.
+<th class="row-fixed">6.К-сть виборців, які отримали бюлетені за місцем перебув.
+<th class="row-fixed">7.Загальна к-сть виборців, які отримали бюлетені
+<th class="row-fixed">8.К-сть бюлетенів, що не підлягають врахуванню
+<th class="row-fixed">9.К-сть виборців, які взяли участь у голосуванні
+<th class="row-fixed">10.К-сть бюлетенів, визнаних недійсними
+<th class="row-fixed">Зеленський<br>Володимир
+<th class="row-fixed">Порошенко<br>Петро
+<th class="row-fixed">Дата та час протоколу
+</tr>
+</thead>
+<tr>
+<td class="cntr col-fixed"><b>511073</b>
+<td class="cntr">2112
+<td class="cntr">2160
+<td class="cntr">8
+<td class="cntr">686
+<td class="cntr">1421
+<td class="cntr">5
+<td class="cntr">1426
+<td class="cntr">0
+<td class="cntr">1426
+<td class="cntr">33
+<td class="cntr">1259
+<td class="cntr">134
+<td class="cntr">21.04.2019 22:51
+<tr>
+<td class="cntr col-fixed"><b>511074</b>
+<td class="cntr">2224
+<td class="cntr">2230
+<td class="cntr">5
+<td class="cntr">733
+<td class="cntr">1488
+<td class="cntr">3
+<td class="cntr">1491
+<td class="cntr">0
+<td class="cntr">1491
+<td class="cntr">34
+<td class="cntr">1319
+<td class="cntr">138
+<td class="cntr">22.04.2019 01:15
+<tr>
+<td class="cntr col-fixed"><b>511075</b>
+<td class="cntr">2272
+<td class="cntr">2259
+<td class="cntr">2
+<td class="cntr">718
+<td class="cntr">1552
+<td class="cntr">2
+<td class="cntr">1554
+<td class="cntr">0
+<td class="cntr">1554
+<td class="cntr">47
+<td class="cntr">1330
+<td class="cntr">177
+<td class="cntr">22.04.2019 02:00
+<tr>
+<td class="cntr col-fixed"><b>511076</b>
+<td class="cntr">2208
+<td class="cntr">2193
+<td class="cntr">14
+<td class="cntr">750
+<td class="cntr">1451
+<td class="cntr">7
+<td class="cntr">1458
+<td class="cntr">0
+<td class="cntr">1458
+<td class="cntr">37
+<td class="cntr">1248
+<td class="cntr">173
+<td class="cntr">22.04.2019 01:05
+<tr>
+<td class="cntr col-fixed"><b>511077</b>
+<td class="cntr">2368
+<td class="cntr">2376
+<td class="cntr">8
+<td class="cntr">798
+<td class="cntr">1564
+<td class="cntr">6
+<td class="cntr">1570
+<td class="cntr">0
+<td class="cntr">1570
+<td class="cntr">38
+<td class="cntr">1299
+<td class="cntr">233
+<td class="cntr">22.04.2019 00:04
+<tr>
+<td class="cntr col-fixed"><b>511078</b>
+<td class="cntr">2080
+<td class="cntr">2069
+<td class="cntr">13
+<td class="cntr">772
+<td class="cntr">1297
+<td class="cntr">11
+<td class="cntr">1308
+<td class="cntr">0
+<td class="cntr">1308
+<td class="cntr">24
+<td class="cntr">1156
+<td class="cntr">128
+<td class="cntr">22.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>511079</b>
+<td class="cntr">2256
+<td class="cntr">2272
+<td class="cntr">10
+<td class="cntr">844
+<td class="cntr">1403
+<td class="cntr">9
+<td class="cntr">1412
+<td class="cntr">0
+<td class="cntr">1412
+<td class="cntr">35
+<td class="cntr">1204
+<td class="cntr">173
+<td class="cntr">21.04.2019 22:53
+<tr>
+<td class="cntr col-fixed"><b>511080</b>
+<td class="cntr">1808
+<td class="cntr">1777
+<td class="cntr">23
+<td class="cntr">724
+<td class="cntr">1070
+<td class="cntr">14
+<td class="cntr">1084
+<td class="cntr">0
+<td class="cntr">1084
+<td class="cntr">30
+<td class="cntr">934
+<td class="cntr">120
+<td class="cntr">21.04.2019 22:55
+<tr>
+<td class="cntr col-fixed"><b>511081</b>
+<td class="cntr">1904
+<td class="cntr">1897
+<td class="cntr">11
+<td class="cntr">725
+<td class="cntr">1171
+<td class="cntr">8
+<td class="cntr">1179
+<td class="cntr">0
+<td class="cntr">1179
+<td class="cntr">28
+<td class="cntr">1019
+<td class="cntr">132
+<td class="cntr">22.04.2019 00:15
+<tr>
+<td class="cntr col-fixed"><b>511082</b>
+<td class="cntr">2080
+<td class="cntr">2072
+<td class="cntr">7
+<td class="cntr">820
+<td class="cntr">1253
+<td class="cntr">7
+<td class="cntr">1260
+<td class="cntr">0
+<td class="cntr">1260
+<td class="cntr">35
+<td class="cntr">1059
+<td class="cntr">166
+<td class="cntr">22.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>511083</b>
+<td class="cntr">2032
+<td class="cntr">2013
+<td class="cntr">5
+<td class="cntr">813
+<td class="cntr">1215
+<td class="cntr">4
+<td class="cntr">1219
+<td class="cntr">0
+<td class="cntr">1219
+<td class="cntr">29
+<td class="cntr">1004
+<td class="cntr">186
+<td class="cntr">21.04.2019 22:53
+<tr>
+<td class="cntr col-fixed"><b>511084</b>
+<td class="cntr">1631
+<td class="cntr">1624
+<td class="cntr">6
+<td class="cntr">614
+<td class="cntr">1014
+<td class="cntr">3
+<td class="cntr">1017
+<td class="cntr">0
+<td class="cntr">1017
+<td class="cntr">30
+<td class="cntr">867
+<td class="cntr">120
+<td class="cntr">21.04.2019 23:10
+<tr>
+<td class="cntr col-fixed"><b>511085</b>
+<td class="cntr">2240
+<td class="cntr">2233
+<td class="cntr">10
+<td class="cntr">835
+<td class="cntr">1398
+<td class="cntr">7
+<td class="cntr">1405
+<td class="cntr">0
+<td class="cntr">1404
+<td class="cntr">48
+<td class="cntr">1173
+<td class="cntr">183
+<td class="cntr">22.04.2019 01:15
+<tr>
+<td class="cntr col-fixed"><b>511086</b>
+<td class="cntr">2400
+<td class="cntr">2404
+<td class="cntr">8
+<td class="cntr">863
+<td class="cntr">1530
+<td class="cntr">7
+<td class="cntr">1537
+<td class="cntr">0
+<td class="cntr">1537
+<td class="cntr">32
+<td class="cntr">1290
+<td class="cntr">215
+<td class="cntr">22.04.2019 00:30
+<tr>
+<td class="cntr col-fixed"><b>511087</b>
+<td class="cntr">2336
+<td class="cntr">2348
+<td class="cntr">7
+<td class="cntr">884
+<td class="cntr">1447
+<td class="cntr">5
+<td class="cntr">1452
+<td class="cntr">0
+<td class="cntr">1452
+<td class="cntr">44
+<td class="cntr">1182
+<td class="cntr">226
+<td class="cntr">21.04.2019 23:50
+<tr>
+<td class="cntr col-fixed"><b>511088</b>
+<td class="cntr">2224
+<td class="cntr">2216
+<td class="cntr">13
+<td class="cntr">845
+<td class="cntr">1370
+<td class="cntr">9
+<td class="cntr">1379
+<td class="cntr">0
+<td class="cntr">1379
+<td class="cntr">30
+<td class="cntr">1147
+<td class="cntr">202
+<td class="cntr">22.04.2019 00:45
+<tr>
+<td class="cntr col-fixed"><b>511089</b>
+<td class="cntr">2288
+<td class="cntr">2291
+<td class="cntr">11
+<td class="cntr">1024
+<td class="cntr">1257
+<td class="cntr">7
+<td class="cntr">1264
+<td class="cntr">0
+<td class="cntr">1264
+<td class="cntr">20
+<td class="cntr">1065
+<td class="cntr">179
+<td class="cntr">22.04.2019 01:30
+<tr>
+<td class="cntr col-fixed"><b>511090</b>
+<td class="cntr">2288
+<td class="cntr">2312
+<td class="cntr">9
+<td class="cntr">887
+<td class="cntr">1394
+<td class="cntr">7
+<td class="cntr">1401
+<td class="cntr">0
+<td class="cntr">1401
+<td class="cntr">33
+<td class="cntr">1218
+<td class="cntr">150
+<td class="cntr">22.04.2019 00:40
+<tr>
+<td class="cntr col-fixed"><b>511091</b>
+<td class="cntr">2480
+<td class="cntr">2508
+<td class="cntr">6
+<td class="cntr">1038
+<td class="cntr">1439
+<td class="cntr">3
+<td class="cntr">1442
+<td class="cntr">0
+<td class="cntr">1442
+<td class="cntr">26
+<td class="cntr">1219
+<td class="cntr">197
+<td class="cntr">22.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>511092</b>
+<td class="cntr">2336
+<td class="cntr">2343
+<td class="cntr">14
+<td class="cntr">853
+<td class="cntr">1474
+<td class="cntr">9
+<td class="cntr">1483
+<td class="cntr">0
+<td class="cntr">1483
+<td class="cntr">36
+<td class="cntr">1256
+<td class="cntr">191
+<td class="cntr">22.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>511093</b>
+<td class="cntr">2192
+<td class="cntr">2210
+<td class="cntr">9
+<td class="cntr">766
+<td class="cntr">1420
+<td class="cntr">6
+<td class="cntr">1426
+<td class="cntr">0
+<td class="cntr">1425
+<td class="cntr">28
+<td class="cntr">1218
+<td class="cntr">179
+<td class="cntr">22.04.2019 01:10
+<tr>
+<td class="cntr col-fixed"><b>511094</b>
+<td class="cntr">2096
+<td class="cntr">2121
+<td class="cntr">8
+<td class="cntr">762
+<td class="cntr">1331
+<td class="cntr">3
+<td class="cntr">1334
+<td class="cntr">0
+<td class="cntr">1334
+<td class="cntr">17
+<td class="cntr">1144
+<td class="cntr">173
+<td class="cntr">21.04.2019 22:26
+<tr>
+<td class="cntr col-fixed"><b>511095</b>
+<td class="cntr">2224
+<td class="cntr">2219
+<td class="cntr">4
+<td class="cntr">727
+<td class="cntr">1496
+<td class="cntr">1
+<td class="cntr">1497
+<td class="cntr">0
+<td class="cntr">1497
+<td class="cntr">52
+<td class="cntr">1233
+<td class="cntr">212
+<td class="cntr">21.04.2019 23:48
+<tr>
+<td class="cntr col-fixed"><b>511096</b>
+<td class="cntr">1760
+<td class="cntr">1767
+<td class="cntr">14
+<td class="cntr">770
+<td class="cntr">984
+<td class="cntr">6
+<td class="cntr">990
+<td class="cntr">0
+<td class="cntr">990
+<td class="cntr">16
+<td class="cntr">849
+<td class="cntr">125
+<td class="cntr">22.04.2019 01:00
+<tr>
+<td class="cntr col-fixed"><b>511097</b>
+<td class="cntr">1568
+<td class="cntr">1628
+<td class="cntr">10
+<td class="cntr">553
+<td class="cntr">1009
+<td class="cntr">6
+<td class="cntr">1015
+<td class="cntr">0
+<td class="cntr">1015
+<td class="cntr">37
+<td class="cntr">854
+<td class="cntr">124
+<td class="cntr">22.04.2019 00:20
+<tr>
+<td class="cntr col-fixed"><b>511098</b>
+<td class="cntr">1824
+<td class="cntr">1826
+<td class="cntr">10
+<td class="cntr">846
+<td class="cntr">970
+<td class="cntr">8
+<td class="cntr">978
+<td class="cntr">0
+<td class="cntr">978
+<td class="cntr">18
+<td class="cntr">855
+<td class="cntr">105
+<td class="cntr">22.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>511099</b>
+<td class="cntr">2480
+<td class="cntr">2626
+<td class="cntr">7
+<td class="cntr">939
+<td class="cntr">1534
+<td class="cntr">7
+<td class="cntr">1541
+<td class="cntr">0
+<td class="cntr">1541
+<td class="cntr">63
+<td class="cntr">1312
+<td class="cntr">166
+<td class="cntr">22.04.2019 04:15
+<tr>
+<td class="cntr col-fixed"><b>511100</b>
+<td class="cntr">2464
+<td class="cntr">2466
+<td class="cntr">18
+<td class="cntr">1026
+<td class="cntr">1429
+<td class="cntr">9
+<td class="cntr">1438
+<td class="cntr">0
+<td class="cntr">1438
+<td class="cntr">37
+<td class="cntr">1247
+<td class="cntr">154
+<td class="cntr">22.04.2019 02:28
+<tr>
+<td class="cntr col-fixed"><b>511101</b>
+<td class="cntr">1504
+<td class="cntr">1512
+<td class="cntr">4
+<td class="cntr">553
+<td class="cntr">948
+<td class="cntr">3
+<td class="cntr">951
+<td class="cntr">0
+<td class="cntr">951
+<td class="cntr">29
+<td class="cntr">820
+<td class="cntr">102
+<td class="cntr">22.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>511102</b>
+<td class="cntr">1664
+<td class="cntr">1669
+<td class="cntr">4
+<td class="cntr">632
+<td class="cntr">1029
+<td class="cntr">3
+<td class="cntr">1032
+<td class="cntr">0
+<td class="cntr">1032
+<td class="cntr">18
+<td class="cntr">886
+<td class="cntr">128
+<td class="cntr">22.04.2019 00:40
+<tr>
+<td class="cntr col-fixed"><b>511103</b>
+<td class="cntr">2240
+<td class="cntr">2225
+<td class="cntr">12
+<td class="cntr">819
+<td class="cntr">1412
+<td class="cntr">9
+<td class="cntr">1421
+<td class="cntr">0
+<td class="cntr">1421
+<td class="cntr">23
+<td class="cntr">1224
+<td class="cntr">174
+<td class="cntr">22.04.2019 09:00
+<tr>
+<td class="cntr col-fixed"><b>511104</b>
+<td class="cntr">2208
+<td class="cntr">2217
+<td class="cntr">8
+<td class="cntr">742
+<td class="cntr">1461
+<td class="cntr">5
+<td class="cntr">1466
+<td class="cntr">0
+<td class="cntr">1466
+<td class="cntr">33
+<td class="cntr">1252
+<td class="cntr">181
+<td class="cntr">22.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>511105</b>
+<td class="cntr">2416
+<td class="cntr">2448
+<td class="cntr">0
+<td class="cntr">835
+<td class="cntr">1581
+<td class="cntr">0
+<td class="cntr">1581
+<td class="cntr">0
+<td class="cntr">1581
+<td class="cntr">34
+<td class="cntr">1317
+<td class="cntr">230
+<td class="cntr">22.04.2019 01:10
+<tr>
+<td class="cntr col-fixed"><b>511106</b>
+<td class="cntr">2176
+<td class="cntr">2181
+<td class="cntr">12
+<td class="cntr">733
+<td class="cntr">1435
+<td class="cntr">8
+<td class="cntr">1443
+<td class="cntr">0
+<td class="cntr">1443
+<td class="cntr">33
+<td class="cntr">1237
+<td class="cntr">173
+<td class="cntr">22.04.2019 00:20
+<tr>
+<td class="cntr col-fixed"><b>511107</b>
+<td class="cntr">2144
+<td class="cntr">2139
+<td class="cntr">12
+<td class="cntr">788
+<td class="cntr">1347
+<td class="cntr">9
+<td class="cntr">1356
+<td class="cntr">0
+<td class="cntr">1356
+<td class="cntr">42
+<td class="cntr">1134
+<td class="cntr">180
+<td class="cntr">22.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>511108</b>
+<td class="cntr">2128
+<td class="cntr">2119
+<td class="cntr">9
+<td class="cntr">752
+<td class="cntr">1368
+<td class="cntr">8
+<td class="cntr">1376
+<td class="cntr">0
+<td class="cntr">1376
+<td class="cntr">35
+<td class="cntr">1160
+<td class="cntr">181
+<td class="cntr">22.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>511109</b>
+<td class="cntr">2304
+<td class="cntr">2293
+<td class="cntr">7
+<td class="cntr">856
+<td class="cntr">1443
+<td class="cntr">5
+<td class="cntr">1448
+<td class="cntr">0
+<td class="cntr">1448
+<td class="cntr">46
+<td class="cntr">1228
+<td class="cntr">174
+<td class="cntr">21.04.2019 22:00
+<tr>
+<td class="cntr col-fixed"><b>511110</b>
+<td class="cntr">2016
+<td class="cntr">2003
+<td class="cntr">10
+<td class="cntr">709
+<td class="cntr">1302
+<td class="cntr">5
+<td class="cntr">1307
+<td class="cntr">0
+<td class="cntr">1307
+<td class="cntr">20
+<td class="cntr">1142
+<td class="cntr">145
+<td class="cntr">22.04.2019 00:08
+<tr>
+<td class="cntr col-fixed"><b>511111</b>
+<td class="cntr">1936
+<td class="cntr">1919
+<td class="cntr">8
+<td class="cntr">661
+<td class="cntr">1269
+<td class="cntr">6
+<td class="cntr">1275
+<td class="cntr">0
+<td class="cntr">1274
+<td class="cntr">25
+<td class="cntr">1086
+<td class="cntr">163
+<td class="cntr">22.04.2019 03:01
+<tr>
+<td class="cntr col-fixed"><b>511112</b>
+<td class="cntr">2048
+<td class="cntr">2040
+<td class="cntr">9
+<td class="cntr">689
+<td class="cntr">1350
+<td class="cntr">9
+<td class="cntr">1359
+<td class="cntr">0
+<td class="cntr">1359
+<td class="cntr">30
+<td class="cntr">1175
+<td class="cntr">154
+<td class="cntr">22.04.2019 00:03
+<tr>
+<td class="cntr col-fixed"><b>511113</b>
+<td class="cntr">2064
+<td class="cntr">2063
+<td class="cntr">12
+<td class="cntr">697
+<td class="cntr">1360
+<td class="cntr">7
+<td class="cntr">1367
+<td class="cntr">0
+<td class="cntr">1367
+<td class="cntr">38
+<td class="cntr">1159
+<td class="cntr">170
+<td class="cntr">22.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>511114</b>
+<td class="cntr">2048
+<td class="cntr">2048
+<td class="cntr">19
+<td class="cntr">641
+<td class="cntr">1391
+<td class="cntr">16
+<td class="cntr">1407
+<td class="cntr">0
+<td class="cntr">1407
+<td class="cntr">53
+<td class="cntr">1191
+<td class="cntr">163
+<td class="cntr">22.04.2019 01:19
+<tr>
+<td class="cntr col-fixed"><b>511115</b>
+<td class="cntr">2224
+<td class="cntr">2256
+<td class="cntr">7
+<td class="cntr">852
+<td class="cntr">1369
+<td class="cntr">3
+<td class="cntr">1372
+<td class="cntr">0
+<td class="cntr">1372
+<td class="cntr">41
+<td class="cntr">1174
+<td class="cntr">157
+<td class="cntr">21.04.2019 22:34
+<tr>
+<td class="cntr col-fixed"><b>511116</b>
+<td class="cntr">1952
+<td class="cntr">1932
+<td class="cntr">14
+<td class="cntr">725
+<td class="cntr">1217
+<td class="cntr">10
+<td class="cntr">1227
+<td class="cntr">0
+<td class="cntr">1227
+<td class="cntr">41
+<td class="cntr">1033
+<td class="cntr">153
+<td class="cntr">22.04.2019 00:16
+<tr>
+<td class="cntr col-fixed"><b>511117</b>
+<td class="cntr">2336
+<td class="cntr">2327
+<td class="cntr">13
+<td class="cntr">868
+<td class="cntr">1465
+<td class="cntr">3
+<td class="cntr">1468
+<td class="cntr">0
+<td class="cntr">1468
+<td class="cntr">30
+<td class="cntr">1269
+<td class="cntr">169
+<td class="cntr">22.04.2019 00:03
+<tr>
+<td class="cntr col-fixed"><b>511118</b>
+<td class="cntr">2192
+<td class="cntr">2175
+<td class="cntr">9
+<td class="cntr">822
+<td class="cntr">1364
+<td class="cntr">6
+<td class="cntr">1370
+<td class="cntr">0
+<td class="cntr">1370
+<td class="cntr">48
+<td class="cntr">1183
+<td class="cntr">139
+<td class="cntr">22.04.2019 05:06
+<tr>
+<td class="cntr col-fixed"><b>511119</b>
+<td class="cntr">1968
+<td class="cntr">1980
+<td class="cntr">7
+<td class="cntr">729
+<td class="cntr">1235
+<td class="cntr">4
+<td class="cntr">1239
+<td class="cntr">0
+<td class="cntr">1239
+<td class="cntr">18
+<td class="cntr">1070
+<td class="cntr">151
+<td class="cntr">21.04.2019 21:40
+<tr>
+<td class="cntr col-fixed"><b>511120</b>
+<td class="cntr">2192
+<td class="cntr">2207
+<td class="cntr">8
+<td class="cntr">774
+<td class="cntr">1411
+<td class="cntr">7
+<td class="cntr">1418
+<td class="cntr">0
+<td class="cntr">1417
+<td class="cntr">44
+<td class="cntr">1183
+<td class="cntr">190
+<td class="cntr">22.04.2019 03:20
+<tr>
+<td class="cntr col-fixed"><b>511121</b>
+<td class="cntr">2256
+<td class="cntr">2234
+<td class="cntr">8
+<td class="cntr">886
+<td class="cntr">1364
+<td class="cntr">6
+<td class="cntr">1370
+<td class="cntr">0
+<td class="cntr">1370
+<td class="cntr">36
+<td class="cntr">1170
+<td class="cntr">164
+<td class="cntr">21.04.2019 23:05
+<tr>
+<td class="cntr col-fixed"><b>511122</b>
+<td class="cntr">2336
+<td class="cntr">2335
+<td class="cntr">7
+<td class="cntr">833
+<td class="cntr">1500
+<td class="cntr">3
+<td class="cntr">1503
+<td class="cntr">0
+<td class="cntr">1503
+<td class="cntr">58
+<td class="cntr">1275
+<td class="cntr">170
+<td class="cntr">22.04.2019 01:05
+<tr>
+<td class="cntr col-fixed"><b>511123</b>
+<td class="cntr">2176
+<td class="cntr">2160
+<td class="cntr">7
+<td class="cntr">773
+<td class="cntr">1399
+<td class="cntr">4
+<td class="cntr">1403
+<td class="cntr">0
+<td class="cntr">1403
+<td class="cntr">30
+<td class="cntr">1219
+<td class="cntr">154
+<td class="cntr">22.04.2019 04:30
+<tr>
+<td class="cntr col-fixed"><b>511124</b>
+<td class="cntr">2080
+<td class="cntr">2080
+<td class="cntr">7
+<td class="cntr">699
+<td class="cntr">1375
+<td class="cntr">6
+<td class="cntr">1381
+<td class="cntr">0
+<td class="cntr">1381
+<td class="cntr">33
+<td class="cntr">1176
+<td class="cntr">172
+<td class="cntr">22.04.2019 01:10
+<tr>
+<td class="cntr col-fixed"><b>511125</b>
+<td class="cntr">2256
+<td class="cntr">2255
+<td class="cntr">4
+<td class="cntr">878
+<td class="cntr">1374
+<td class="cntr">4
+<td class="cntr">1378
+<td class="cntr">0
+<td class="cntr">1378
+<td class="cntr">30
+<td class="cntr">1199
+<td class="cntr">149
+<td class="cntr">21.04.2019 21:50
+<tr>
+<td class="cntr col-fixed"><b>511126</b>
+<td class="cntr">2160
+<td class="cntr">2153
+<td class="cntr">3
+<td class="cntr">761
+<td class="cntr">1397
+<td class="cntr">2
+<td class="cntr">1399
+<td class="cntr">0
+<td class="cntr">1399
+<td class="cntr">35
+<td class="cntr">1172
+<td class="cntr">192
+<td class="cntr">22.04.2019 00:05
+<tr>
+<td class="cntr col-fixed"><b>511127</b>
+<td class="cntr">1952
+<td class="cntr">1960
+<td class="cntr">6
+<td class="cntr">664
+<td class="cntr">1284
+<td class="cntr">4
+<td class="cntr">1288
+<td class="cntr">0
+<td class="cntr">1288
+<td class="cntr">34
+<td class="cntr">1124
+<td class="cntr">130
+<td class="cntr">22.04.2019 00:02
+<tr>
+<td class="cntr col-fixed"><b>511128</b>
+<td class="cntr">2238
+<td class="cntr">2217
+<td class="cntr">9
+<td class="cntr">769
+<td class="cntr">1461
+<td class="cntr">8
+<td class="cntr">1469
+<td class="cntr">0
+<td class="cntr">1469
+<td class="cntr">31
+<td class="cntr">1288
+<td class="cntr">150
+<td class="cntr">22.04.2019 00:01
+<tr>
+<td class="cntr col-fixed"><b>511129</b>
+<td class="cntr">2144
+<td class="cntr">2135
+<td class="cntr">4
+<td class="cntr">738
+<td class="cntr">1404
+<td class="cntr">2
+<td class="cntr">1406
+<td class="cntr">0
+<td class="cntr">1406
+<td class="cntr">43
+<td class="cntr">1192
+<td class="cntr">171
+<td class="cntr">22.04.2019 00:15
+<tr>
+<td class="cntr col-fixed"><b>511130</b>
+<td class="cntr">1952
+<td class="cntr">1963
+<td class="cntr">6
+<td class="cntr">667
+<td class="cntr">1280
+<td class="cntr">5
+<td class="cntr">1285
+<td class="cntr">0
+<td class="cntr">1285
+<td class="cntr">24
+<td class="cntr">1133
+<td class="cntr">128
+<td class="cntr">22.04.2019 00:25
+<tr>
+<td class="cntr col-fixed"><b>511131</b>
+<td class="cntr">1760
+<td class="cntr">1759
+<td class="cntr">3
+<td class="cntr">637
+<td class="cntr">1122
+<td class="cntr">1
+<td class="cntr">1123
+<td class="cntr">0
+<td class="cntr">1123
+<td class="cntr">33
+<td class="cntr">977
+<td class="cntr">113
+<td class="cntr">21.04.2019 21:25
+<tr>
+<td class="cntr col-fixed"><b>511132</b>
+<td class="cntr">2144
+<td class="cntr">2114
+<td class="cntr">9
+<td class="cntr">822
+<td class="cntr">1313
+<td class="cntr">9
+<td class="cntr">1322
+<td class="cntr">0
+<td class="cntr">1322
+<td class="cntr">42
+<td class="cntr">1122
+<td class="cntr">158
+<td class="cntr">22.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>511133</b>
+<td class="cntr">2208
+<td class="cntr">2239
+<td class="cntr">15
+<td class="cntr">767
+<td class="cntr">1432
+<td class="cntr">9
+<td class="cntr">1441
+<td class="cntr">0
+<td class="cntr">1441
+<td class="cntr">48
+<td class="cntr">1212
+<td class="cntr">181
+<td class="cntr">22.04.2019 01:07
+<tr>
+<td class="cntr col-fixed"><b>511134</b>
+<td class="cntr">1920
+<td class="cntr">1935
+<td class="cntr">10
+<td class="cntr">633
+<td class="cntr">1279
+<td class="cntr">8
+<td class="cntr">1287
+<td class="cntr">0
+<td class="cntr">1287
+<td class="cntr">41
+<td class="cntr">1077
+<td class="cntr">169
+<td class="cntr">22.04.2019 02:00
+<tr>
+<td class="cntr col-fixed"><b>511135</b>
+<td class="cntr">2160
+<td class="cntr">2189
+<td class="cntr">3
+<td class="cntr">778
+<td class="cntr">1381
+<td class="cntr">1
+<td class="cntr">1382
+<td class="cntr">0
+<td class="cntr">1382
+<td class="cntr">38
+<td class="cntr">1175
+<td class="cntr">169
+<td class="cntr">22.04.2019 00:30
+<tr>
+<td class="cntr col-fixed"><b>511136</b>
+<td class="cntr">2384
+<td class="cntr">2381
+<td class="cntr">10
+<td class="cntr">860
+<td class="cntr">1516
+<td class="cntr">8
+<td class="cntr">1524
+<td class="cntr">0
+<td class="cntr">1524
+<td class="cntr">35
+<td class="cntr">1357
+<td class="cntr">132
+<td class="cntr">22.04.2019 00:30
+<tr>
+<td class="cntr col-fixed"><b>511137</b>
+<td class="cntr">2352
+<td class="cntr">2384
+<td class="cntr">6
+<td class="cntr">840
+<td class="cntr">1509
+<td class="cntr">3
+<td class="cntr">1512
+<td class="cntr">0
+<td class="cntr">1512
+<td class="cntr">38
+<td class="cntr">1272
+<td class="cntr">202
+<td class="cntr">22.04.2019 00:02
+<tr>
+<td class="cntr col-fixed"><b>511138</b>
+<td class="cntr">2416
+<td class="cntr">2326
+<td class="cntr">2
+<td class="cntr">988
+<td class="cntr">1426
+<td class="cntr">2
+<td class="cntr">1428
+<td class="cntr">0
+<td class="cntr">1428
+<td class="cntr">28
+<td class="cntr">1126
+<td class="cntr">274
+<td class="cntr">22.04.2019 11:00
+<tr>
+<td class="cntr col-fixed"><b>511139</b>
+<td class="cntr">2240
+<td class="cntr">2260
+<td class="cntr">12
+<td class="cntr">758
+<td class="cntr">1473
+<td class="cntr">9
+<td class="cntr">1482
+<td class="cntr">0
+<td class="cntr">1482
+<td class="cntr">22
+<td class="cntr">1301
+<td class="cntr">159
+<td class="cntr">22.04.2019 00:22
+<tr>
+<td class="cntr col-fixed"><b>511140</b>
+<td class="cntr">2224
+<td class="cntr">2214
+<td class="cntr">8
+<td class="cntr">798
+<td class="cntr">1418
+<td class="cntr">8
+<td class="cntr">1426
+<td class="cntr">0
+<td class="cntr">1426
+<td class="cntr">42
+<td class="cntr">1218
+<td class="cntr">166
+<td class="cntr">21.04.2019 22:47
+<tr>
+<td class="cntr col-fixed"><b>511141</b>
+<td class="cntr">2176
+<td class="cntr">2173
+<td class="cntr">13
+<td class="cntr">819
+<td class="cntr">1348
+<td class="cntr">9
+<td class="cntr">1357
+<td class="cntr">0
+<td class="cntr">1357
+<td class="cntr">21
+<td class="cntr">1166
+<td class="cntr">170
+<td class="cntr">22.04.2019 00:10
+<tr>
+<td class="cntr col-fixed"><b>511142</b>
+<td class="cntr">2192
+<td class="cntr">2218
+<td class="cntr">9
+<td class="cntr">744
+<td class="cntr">1442
+<td class="cntr">6
+<td class="cntr">1448
+<td class="cntr">0
+<td class="cntr">1448
+<td class="cntr">32
+<td class="cntr">1233
+<td class="cntr">183
+<td class="cntr">22.04.2019 01:30
+<tr>
+<td class="cntr col-fixed"><b>511143</b>
+<td class="cntr">2112
+<td class="cntr">2180
+<td class="cntr">14
+<td class="cntr">673
+<td class="cntr">1428
+<td class="cntr">11
+<td class="cntr">1439
+<td class="cntr">0
+<td class="cntr">1439
+<td class="cntr">42
+<td class="cntr">1235
+<td class="cntr">162
+<td class="cntr">21.04.2019 21:52
+<tr>
+<td class="cntr col-fixed"><b>511144</b>
+<td class="cntr">2079
+<td class="cntr">2069
+<td class="cntr">11
+<td class="cntr">701
+<td class="cntr">1367
+<td class="cntr">11
+<td class="cntr">1378
+<td class="cntr">0
+<td class="cntr">1378
+<td class="cntr">55
+<td class="cntr">1176
+<td class="cntr">147
+<td class="cntr">22.04.2019 00:15
+<tr>
+<td class="cntr col-fixed"><b>511145</b>
+<td class="cntr">2000
+<td class="cntr">1999
+<td class="cntr">4
+<td class="cntr">710
+<td class="cntr">1288
+<td class="cntr">2
+<td class="cntr">1290
+<td class="cntr">0
+<td class="cntr">1290
+<td class="cntr">29
+<td class="cntr">1104
+<td class="cntr">157
+<td class="cntr">22.04.2019 00:00
+<tr>
+<td class="cntr col-fixed"><b>511146</b>
+<td class="cntr">1952
+<td class="cntr">1958
+<td class="cntr">12
+<td class="cntr">766
+<td class="cntr">1177
+<td class="cntr">9
+<td class="cntr">1186
+<td class="cntr">0
+<td class="cntr">1186
+<td class="cntr">35
+<td class="cntr">1028
+<td class="cntr">123
+<td class="cntr">21.04.2019 23:30
+<tr>
+<td class="cntr col-fixed"><b>511147</b>
+<td class="cntr">1952
+<td class="cntr">1944
+<td class="cntr">12
+<td class="cntr">720
+<td class="cntr">1224
+<td class="cntr">8
+<td class="cntr">1232
+<td class="cntr">0
+<td class="cntr">1232
+<td class="cntr">50
+<td class="cntr">1033
+<td class="cntr">149
+<td class="cntr">22.04.2019 01:20
+<tr>
+<td class="cntr col-fixed"><b>511148</b>
+<td class="cntr">2352
+<td class="cntr">2370
+<td class="cntr">17
+<td class="cntr">856
+<td class="cntr">1486
+<td class="cntr">10
+<td class="cntr">1496
+<td class="cntr">0
+<td class="cntr">1496
+<td class="cntr">44
+<td class="cntr">1245
+<td class="cntr">207
+<td class="cntr">22.04.2019 00:15
+<tr>
+<td class="cntr col-fixed"><b>511149</b>
+<td class="cntr">1856
+<td class="cntr">1840
+<td class="cntr">6
+<td class="cntr">688
+<td class="cntr">1163
+<td class="cntr">5
+<td class="cntr">1168
+<td class="cntr">0
+<td class="cntr">1168
+<td class="cntr">21
+<td class="cntr">974
+<td class="cntr">173
+<td class="cntr">22.04.2019 00:26
+<tr>
+<td class="cntr col-fixed"><b>511150</b>
+<td class="cntr">1744
+<td class="cntr">1740
+<td class="cntr">17
+<td class="cntr">703
+<td class="cntr">1029
+<td class="cntr">12
+<td class="cntr">1041
+<td class="cntr">0
+<td class="cntr">1041
+<td class="cntr">35
+<td class="cntr">890
+<td class="cntr">116
+<td class="cntr">22.04.2019 00:30
+<tr>
+<td class="cntr col-fixed"><b>511151</b>
+<td class="cntr">2352
+<td class="cntr">2351
+<td class="cntr">9
+<td class="cntr">908
+<td class="cntr">1439
+<td class="cntr">5
+<td class="cntr">1444
+<td class="cntr">0
+<td class="cntr">1444
+<td class="cntr">31
+<td class="cntr">1242
+<td class="cntr">171
+<td class="cntr">21.04.2019 22:50
+<tr>
+<td class="cntr col-fixed"><b>511152</b>
+<td class="cntr">368
+<td class="cntr">90
+<td class="cntr">10
+<td class="cntr">298
+<td class="cntr">65
+<td class="cntr">5
+<td class="cntr">70
+<td class="cntr">0
+<td class="cntr">70
+<td class="cntr">1
+<td class="cntr">62
+<td class="cntr">7
+<td class="cntr">21.04.2019 23:15
+<tr>
+<td class="cntr col-fixed"><b>511153</b>
+<td class="cntr">320
+<td class="cntr">54
+<td class="cntr">0
+<td class="cntr">299
+<td class="cntr">21
+<td class="cntr">0
+<td class="cntr">21
+<td class="cntr">0
+<td class="cntr">21
+<td class="cntr">1
+<td class="cntr">18
+<td class="cntr">2
+<td class="cntr">21.04.2019 23:00
+<tr>
+<td class="cntr col-fixed"><b>511154</b>
+<td class="cntr">208
+<td class="cntr">60
+<td class="cntr">1
+<td class="cntr">150
+<td class="cntr">57
+<td class="cntr">1
+<td class="cntr">58
+<td class="cntr">0
+<td class="cntr">58
+<td class="cntr">1
+<td class="cntr">51
+<td class="cntr">6
+<td class="cntr">22.04.2019 00:16
+<tr>
+<td class="cntr col-fixed"><b>511155</b>
+<td class="cntr">144
+<td class="cntr">52
+<td class="cntr">0
+<td class="cntr">103
+<td class="cntr">41
+<td class="cntr">0
+<td class="cntr">41
+<td class="cntr">0
+<td class="cntr">41
+<td class="cntr">5
+<td class="cntr">31
+<td class="cntr">5
+<td class="cntr">21.04.2019 23:30
+<tr>
+<td class="cntr col-fixed"><b>511157</b>
+<td class="cntr">176
+<td class="cntr">53
+<td class="cntr">0
+<td class="cntr">124
+<td class="cntr">52
+<td class="cntr">0
+<td class="cntr">52
+<td class="cntr">0
+<td class="cntr">52
+<td class="cntr">0
+<td class="cntr">28
+<td class="cntr">24
+<td class="cntr">21.04.2019 21:16
+<tr>
+<td class="cntr col-fixed"><b>511158</b>
+<td class="cntr">112
+<td class="cntr">109
+<td class="cntr">12
+<td class="cntr">26
+<td class="cntr">80
+<td class="cntr">6
+<td class="cntr">86
+<td class="cntr">0
+<td class="cntr">86
+<td class="cntr">1
+<td class="cntr">79
+<td class="cntr">6
+<td class="cntr">21.04.2019 21:35
+</table>
+</div>
+</main>
+</div>
+<footer>
+<div id = "footalert">Представлені оперативні дані і документація носять інформаційний характер і не можуть використовуватись як офіційні документи. <br/>
+При повному або частковому використанні інформації, розміщеної на web-сайті, посилання на джерело інформації обов’язкове.</div>
+<p class="copyright">© WWW ІАС "Вибори Президента України"</p>
+</footer>
+</body>
+</html>
