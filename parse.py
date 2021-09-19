@@ -10,7 +10,7 @@ import tesserocr
 
 img = "example.png"
 
-async def main():
+async def download():
     browser = await launch({
         "headless": True,
         "defaultViewport": {
@@ -22,9 +22,12 @@ async def main():
     await page.screenshot({'path': img, 'fullPage': 'true'})
     await browser.close()
 
-asyncio.get_event_loop().run_until_complete(main())
+def ocr():
+    # print(tesserocr.get_languages())
+    with tesserocr.PyTessBaseAPI(psm=tesserocr.PSM.AUTO_OSD) as api:
+        api.SetImageFile(img)
+        print(api.GetUTF8Text())
 
-print(tesserocr.get_languages())
-with tesserocr.PyTessBaseAPI(psm=tesserocr.PSM.AUTO_OSD) as api:
-    api.SetImageFile(img)
-    print(api.GetUTF8Text())
+asyncio.get_event_loop().run_until_complete(download())
+ocr()
+
