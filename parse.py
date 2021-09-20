@@ -1,9 +1,8 @@
-
 #!/usr/bin/env python3
 
 # HOW TO USE:
 # sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev pkg-config tesseract-ocr-rus
-# pip3 install pyppeteer tesserocr
+# pip3 install pyppeteer tesserocr asyncio
 
 import asyncio
 from pyppeteer import launch
@@ -22,8 +21,8 @@ async def main():
         "args": ['--no-sandbox'],
         "headless": True,
         "defaultViewport": {
-            "width":1920,
-            "height":3000
+            "width": 1920,
+            "height": 3000
       }})
     logging.info(f"Opening {url}...")
     page = await browser.newPage()
@@ -54,13 +53,16 @@ async def main():
     await page.screenshot({'path': img, 'fullPage': 'true'})
     await browser.close()
 
-asyncio.get_event_loop().run_until_complete(main())
+def ocr():
+    with tesserocr.PyTessBaseAPI(psm=tesserocr.PSM.AUTO_OSD, lang='rus') as api:
+        logging.info("Running optical character recognition...")
+        api.SetImageFile(img)
+        txt = api.GetUTF8Text()
+        print(txt)
+        logging.info("Writing results to file")
+        with open("results.txt", "w") as f:
+            f.write(txt)
 
-with tesserocr.PyTessBaseAPI(psm=tesserocr.PSM.AUTO_OSD, lang='rus') as api:
-    logging.info("Running optical character recognition...")
-    api.SetImageFile(img)
-    txt = api.GetUTF8Text()
-    print(txt)
-    logging.info("Writing results to file")
-    with open("results.txt", "w") as f:
-        f.write(txt)
+asyncio.get_event_loop().run_until_complete(main())
+ocr()
+
